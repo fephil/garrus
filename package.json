@@ -1,0 +1,23 @@
+{
+  "name": "foley",
+  "description": "A modern frontend generator",
+  "version": "0.1.0",
+  "author": "Phil Lennon <enquiry@iampjl.co.uk>",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PJL101/foley.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PJL101/foley/issues"
+  },
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "devDependencies": {
+    "browser-sync": "2.9.11",
+    "gulp": "3.9.0",
+    "handlebars": "4.0.4"
+  }
+}
