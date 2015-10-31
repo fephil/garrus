@@ -1,6 +1,7 @@
 {
   "paths": {
     "build": "_dist/",
+    "buildAssets": "_dist/assets/",    
     "css": "src/css/",
     "files": "src/files/",
     "fonts": "src/fonts/",
