@@ -1,0 +1,11 @@
+{
+  "paths": {
+    "build": "_dist/",
+    "css": "src/css/",
+    "files": "src/files/",
+    "fonts": "src/fonts/",
+    "icons": "src/icons/",
+    "img": "src/img/",
+    "js": "src/js/"
+  }
+}
