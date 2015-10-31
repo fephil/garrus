@@ -5,6 +5,7 @@ var plugins       = require('gulp-load-plugins')();
 // Load non-gulp modules
 var browserSync   = require('browser-sync').create();
 var autoprefixer  = require('autoprefixer');
+var del           = require('del');
 
 // Load config
 var config        = require('./config.json');
@@ -25,6 +26,11 @@ gulp.task('server', function() {
       baseDir: config.paths.build
     }
   });
+});
+
+// Clean
+gulp.task('clean', function() {
+  return del([config.paths.build]);
 });
 
 // Extra tasks TBA
