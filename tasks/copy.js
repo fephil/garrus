@@ -17,6 +17,6 @@ var options = minimist(process.argv.slice(2), knownOptions);
 
 // Copy task
 gulp.task('copy', function (callback) {
-    return gulp.src([config.paths.files + '**/*', 'src/test2/**/*'], {})
-    .pipe(gulp.dest(config.paths.build));
+  return gulp.src([config.paths.files + '**/*', 'src/test2/**/*'], {})
+  .pipe(gulp.dest(config.paths.build));
 });

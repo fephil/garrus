@@ -7,7 +7,7 @@ var gulpif        = require('gulp-if');
 // Specific task modules
 var browserSync   = require('browser-sync').create();
 
-// Browsersync
+// Browsersync task
 gulp.task('server', function() {
   browserSync.init({
     server: {

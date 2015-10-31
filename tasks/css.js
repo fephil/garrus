@@ -17,7 +17,7 @@ var sourcemaps    = require('gulp-sourcemaps');
 var postcss       = require('gulp-postcss');
 var autoprefixer  = require('autoprefixer');
 
-// PostCSS
+// PostCSS task
 gulp.task('css', function () {
   return gulp.src(config.paths.css + '*.css')
     .pipe(gulpif(options.env === 'dev', sourcemaps.init())) // Sourcemaps in dev

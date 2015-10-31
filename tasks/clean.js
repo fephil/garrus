@@ -15,7 +15,7 @@ var options = minimist(process.argv.slice(2), knownOptions);
 // Specific task modules
 var del           = require('del');
 
-// Clean
+// Clean task
 gulp.task('clean', function() {
   return del([config.paths.build]);
 });
