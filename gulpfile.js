@@ -17,21 +17,21 @@ var requireDir    = require('require-dir');
 var tasks         = requireDir('./tasks');
 var runSequence   = require('run-sequence');
 
-// Build with developer assets, run server with live reloading
+// Build website with development assets and run server with live reloading
 gulp.task('default', function(callback) {
   runSequence(
-              'clean',
-              ['css'],
-              'server',
-              callback
-            );
+    'clean',
+    ['css'],
+    'server',
+    callback
+  );
 });
 
-// Build website, either with dev assets depending on flag
+// Build website, either with development or minified assets depending on flag
 gulp.task('build', function(callback) {
   runSequence(
-              'clean',
-              ['css'],
-              callback
-            );
+    'clean',
+    ['css'],
+    callback
+  );
 });
