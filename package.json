@@ -25,7 +25,13 @@
     "gulp-sourcemaps": "1.6.0",
     "handlebars": "4.0.4",
     "minimist": "1.2.0",
+    "postcss-custom-properties": "5.0.0",
+    "postcss-import": "7.1.0",
+    "postcss-pxtorem": "3.1.0",
     "require-dir": "0.3.0",
     "run-sequence": "1.1.4"
+  },
+  "dependencies": {
+    "normalize.css": "3.0.3"
   }
 }
