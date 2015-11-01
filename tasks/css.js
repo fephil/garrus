@@ -19,6 +19,7 @@ var atImport          = require('postcss-import');
 var customProperties  = require('postcss-custom-properties');
 var autoprefixer      = require('autoprefixer');
 var pxtorem           = require('postcss-pxtorem');
+var mqpacker          = require('css-mqpacker');
 
 // Postcss processors
 var processors = [
@@ -27,7 +28,8 @@ var processors = [
   autoprefixer(),
   pxtorem({
     replace: true
-  })
+  }),
+  mqpacker()
 ];
 
 // Postcss task
