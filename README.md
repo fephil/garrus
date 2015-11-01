@@ -15,4 +15,6 @@ A modern frontend generator.
 
 ## NOTE: This is in heavy development and is not ready for use. Please wait for a tagged release version.
 
+Sample image from Unsplash
+
 Have a nice day!

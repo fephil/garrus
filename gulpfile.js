@@ -21,7 +21,7 @@ var runSequence  = require('run-sequence');
 gulp.task('default', function(callback) {
   runSequence(
     'clean',
-    ['css', 'copy'],
+    ['css', 'img', 'copy'],
     'server',
     callback
   );
@@ -31,7 +31,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
   runSequence(
     'clean',
-    ['css', 'copy'],
+    ['css', 'img', 'copy'],
     callback
   );
 });
