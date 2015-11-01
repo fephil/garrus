@@ -1,8 +1,8 @@
 // Load gulp and global config
-var gulp          = require('gulp');
-var config        = require('../config.json');
-var minimist      = require('minimist');
-var gulpif        = require('gulp-if');
+var gulp      = require('gulp');
+var config    = require('../config.json');
+var minimist  = require('minimist');
+var gulpif    = require('gulp-if');
 
 // Get command line options we want to use
 var knownOptions = {
@@ -13,9 +13,9 @@ var knownOptions = {
 var options = minimist(process.argv.slice(2), knownOptions);
 
 // Specific task modules
-var del           = require('del');
+var del = require('del');
 
 // Clean task
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   return del([config.paths.build]);
 });

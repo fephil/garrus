@@ -1,8 +1,8 @@
 // Load gulp and global config
-var gulp          = require('gulp');
-var config        = require('./config.json');
-var minimist      = require('minimist');
-var gulpif        = require('gulp-if');
+var gulp      = require('gulp');
+var config    = require('./config.json');
+var minimist  = require('minimist');
+var gulpif    = require('gulp-if');
 
 // Get command line options we want to use
 var knownOptions = {
@@ -13,9 +13,9 @@ var knownOptions = {
 var options = minimist(process.argv.slice(2), knownOptions);
 
 // Load modules to run tasks from files
-var requireDir    = require('require-dir');
-var tasks         = requireDir('./tasks');
-var runSequence   = require('run-sequence');
+var requireDir   = require('require-dir');
+var tasks        = requireDir('./tasks');
+var runSequence  = require('run-sequence');
 
 // Build website with development assets and run server with live reloading
 gulp.task('default', function(callback) {
