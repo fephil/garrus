@@ -15,6 +15,7 @@ gulp.task('default', function(callback) {
   runSequence(
     'clean',
     ['svgicon', 'css', 'js', 'img', 'copy'],
+    'html',
     'server',
     callback
   );
@@ -25,6 +26,7 @@ gulp.task('deploy', function(callback) {
   runSequence(
     'clean',
     ['svgicon', 'css', 'js', 'img', 'copy'],
+    'html',    
     callback
   );
 });
