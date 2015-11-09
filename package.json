@@ -21,6 +21,7 @@
     "css-mqpacker": "4.0.0",
     "del": "2.0.2",
     "gulp": "3.9.0",
+    "gulp-debug": "2.1.2",
     "gulp-if": "2.0.0",
     "gulp-imagemin": "2.4.0",
     "gulp-postcss": "6.0.1",

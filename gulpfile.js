@@ -1,16 +1,9 @@
 // Load gulp and global config
 var gulp      = require('gulp');
+var debug     = require('gulp-debug');
 var config    = require('./config.json');
-var minimist  = require('minimist');
+var options   = require('minimist')(process.argv.slice(2));
 var gulpif    = require('gulp-if');
-
-// Get command line options we want to use
-var knownOptions = {
-  string: 'env',
-  default: { env: 'dev' }
-};
-
-var options = minimist(process.argv.slice(2), knownOptions);
 
 // Load modules to run tasks from files
 var requireDir   = require('require-dir');
