@@ -15,14 +15,15 @@ A modern frontend generator.
 
 ## NOTE: This is in heavy development and is not ready for use. Please wait for a tagged release version.
 
-## Usage:
+### Usage
 
 * gulp [--production] [--debug]
 * gulp deploy [--production] [--debug]
 
---production flag builds minified assets. --debug flag shows the files in each task.
+`--production` flag builds minified assets.
+`--debug` flag shows the files in each task (with a pipe).
 
-## Credit:
+### Credit
 
 Sample image from Unsplash.
 Sample icons from gulpicon.
