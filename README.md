@@ -18,3 +18,10 @@ A modern frontend generator.
 Sample image from Unsplash
 
 Have a nice day!
+
+## Usage:
+
+* gulp [--production] [--debug]
+* gulp deploy [--production] [--debug]
+
+--production flag builds minified assets. --debug flag shows the files in each task.
