@@ -20,8 +20,8 @@ gulp.task('default', function(callback) {
   );
 });
 
-// Build production ready website, either with development or minified assets depending on flag
-gulp.task('prod', function(callback) {
+// Build website, either with development or minified assets depending on flag
+gulp.task('deploy', function(callback) {
   runSequence(
     'clean',
     ['css', 'img', 'copy'],
