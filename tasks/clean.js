@@ -10,5 +10,8 @@ var del = require('del');
 
 // Clean task
 gulp.task('clean', function () {
-  return del([config.paths.build]);
+  return del([
+    config.paths.build,
+    config.paths.svgicon,    
+  ]);
 });

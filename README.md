@@ -15,13 +15,16 @@ A modern frontend generator.
 
 ## NOTE: This is in heavy development and is not ready for use. Please wait for a tagged release version.
 
-Sample image from Unsplash
-
-Have a nice day!
-
 ## Usage:
 
 * gulp [--production] [--debug]
 * gulp deploy [--production] [--debug]
 
 --production flag builds minified assets. --debug flag shows the files in each task.
+
+## Credit:
+
+Sample image from Unsplash.
+Sample icons from gulpicon.
+
+Have a nice day!

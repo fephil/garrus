@@ -14,7 +14,7 @@ var runSequence  = require('run-sequence');
 gulp.task('default', function(callback) {
   runSequence(
     'clean',
-    ['css', 'img', 'copy'],
+    ['svgicon', 'css', 'img', 'copy'],
     'server',
     callback
   );
@@ -24,7 +24,7 @@ gulp.task('default', function(callback) {
 gulp.task('deploy', function(callback) {
   runSequence(
     'clean',
-    ['css', 'img', 'copy'],
+    ['svgicon', 'css', 'img', 'copy'],
     callback
   );
 });

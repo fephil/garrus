@@ -1,12 +1,13 @@
 {
   "paths": {
     "build": "_dist/",
-    "buildAssets": "_dist/assets/",    
+    "buildAssets": "_dist/assets/",
     "css": "src/css/",
     "files": "src/files/",
     "fonts": "src/fonts/",
     "icons": "src/icons/",
     "img": "src/img/",
-    "js": "src/js/"
+    "js": "src/js/",
+    "svgicon": "_svgicon"
   }
 }

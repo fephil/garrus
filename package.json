@@ -26,6 +26,7 @@
     "gulp-imagemin": "2.4.0",
     "gulp-postcss": "6.0.1",
     "gulp-sourcemaps": "1.6.0",
+    "gulpicon": "0.1.2",
     "handlebars": "4.0.4",
     "imagemin-pngquant": "4.2.0",
     "minimist": "1.2.0",
