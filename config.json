@@ -9,15 +9,22 @@
     "img": "src/img/",
     "js": "src/js/",
     "svgicon": "_svgicon",
-    "pages": "src/pages",
-    "partials": "src/partials",
-    "layouts": "src/layouts"
+    "pages": "src/pages"
   },
   "metalsmith": {
     "plugins": {
-      "metalsmith-layouts": {
+      "metalsmith-drafts": true,
+      "metalsmith-permalinks": {
+        "pattern": ":collection/:title"
+      },
+      "metalsmith-collections": {
+        "blog": {
+          "sortBy": "date",
+          "reverse": true
+        }
+      },      
+      "metalsmith-in-place": {
         "engine": "handlebars",
-        "directory": "./src/layouts",
         "partials": "./src/partials"
       }
     }
