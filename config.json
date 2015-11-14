@@ -8,6 +8,18 @@
     "icons": "src/icons/",
     "img": "src/img/",
     "js": "src/js/",
-    "svgicon": "_svgicon"
+    "svgicon": "_svgicon",
+    "pages": "src/pages",
+    "partials": "src/partials",
+    "layouts": "src/layouts"
+  },
+  "metalsmith": {
+    "plugins": {
+      "metalsmith-layouts": {
+        "engine": "handlebars",
+        "directory": "./src/layouts",
+        "partials": "./src/partials"
+      }
+    }
   }
 }
