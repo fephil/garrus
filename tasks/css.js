@@ -18,7 +18,7 @@ var mqpacker          = require('css-mqpacker');
 var processors = [
   atImport(),
   customProperties(),
-  autoprefixer(),
+  autoprefixer({ browsers: config.autoprefixer.browsers }),
   pxtorem({
     replace: true
   }),
@@ -28,9 +28,9 @@ var processors = [
 // Postcss task
 gulp.task('css', function () {
   return gulp.src(config.paths.css + '*.css')
-    .pipe(gulpif(options.debug === true, debug({title: 'CSS Processed:'})))  
-    .pipe(gulpif(options.env !== 'production', sourcemaps.init())) // Sourcemaps in dev
+    .pipe(gulpif(options.debug === true, debug({title: 'CSS Processed:'})))
+    .pipe(gulpif(options.env !== 'production', sourcemaps.init())) // Sourcemaps if not on production flag
     .pipe(postcss(processors))
-    .pipe(gulpif(options.env !== 'production', sourcemaps.write('.'))) // Sourcemaps in dev
+    .pipe(gulpif(options.env !== 'production', sourcemaps.write('.'))) // Sourcemaps if not on production flag
     .pipe(gulp.dest(config.paths.buildAssets + 'css'));
 });

@@ -11,6 +11,9 @@
     "svgicon": "_svgicon",
     "pages": "src/pages"
   },
+  "autoprefixer": {
+    "browsers": ["last 2 versions", "IE >= 10"]
+  },
   "metalsmith": {
     "plugins": {
       "metalsmith-drafts": true,
@@ -22,7 +25,7 @@
           "sortBy": "date",
           "reverse": true
         }
-      },      
+      },
       "metalsmith-in-place": {
         "engine": "handlebars",
         "partials": "./src/partials"
