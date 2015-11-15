@@ -1,6 +1,7 @@
 module.exports = {
+  entry: ['./src/js/global.js', './src/js/app.js'],
   output: {
-    filename: 'bundle.js',
+    filename: './_dist/assets/js/bundle.js',
   },
   module: {
     loaders: [

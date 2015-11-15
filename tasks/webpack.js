@@ -6,11 +6,17 @@ var options   = require('minimist')(process.argv.slice(2));
 var gulpif    = require('gulp-if');
 
 // Specific task modules
-var webpack = require('webpack-stream');
+var gutil = require('gulp-util');
+var webpack = require('webpack');
+var webpackConfig = require('../webpack.config.js');
 
 // JS task
-gulp.task('webpack', function () {
-  return gulp.src(config.paths.js + 'app.js')
-    .pipe(webpack( require('../webpack.config.js') ))
-    .pipe(gulp.dest(config.paths.build));
+gulp.task('webpack', function (callback) {
+  webpack(webpackConfig, function(err, stats) {
+    if(err) throw new gutil.PluginError('webpack', err);
+      gutil.log("[webpack]", stats.toString({
+        colors: true
+      }));
+    callback();
+  });
 });

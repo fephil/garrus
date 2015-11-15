@@ -1,1 +1,1 @@
-document.write(require('./test.js'));
+require('./test');

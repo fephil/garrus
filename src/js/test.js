@@ -1,1 +1,1 @@
-module.exports = "This is some test content";
+console.log('this is a test require');
