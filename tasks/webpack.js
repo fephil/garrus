@@ -9,7 +9,7 @@ var gulpif    = require('gulp-if');
 var webpack = require('webpack-stream');
 
 // JS task
-gulp.task('js', function () {
+gulp.task('webpack', function () {
   return gulp.src(config.paths.js + 'app.js')
     .pipe(webpack( require('../webpack.config.js') ))
     .pipe(gulp.dest(config.paths.build));
