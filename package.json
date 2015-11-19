@@ -1,6 +1,6 @@
 {
   "name": "foley",
-  "description": "A modern and opinionated frontend workflow for building a static website",
+  "description": "A modern, opinionated frontend workflow for building a static website",
   "version": "0.1.0",
   "author": "Phil Lennon <enquiry@iampjl.co.uk>",
   "private": true,
