@@ -16,16 +16,6 @@
   },
   "metalsmith": {
     "plugins": {
-      "metalsmith-drafts": true,
-      "metalsmith-permalinks": {
-        "pattern": ":collection/:title"
-      },
-      "metalsmith-collections": {
-        "blog": {
-          "sortBy": "date",
-          "reverse": true
-        }
-      },
       "metalsmith-in-place": {
         "engine": "handlebars",
         "partials": "./src/partials"
