@@ -2,7 +2,7 @@
 var gulp      = require('gulp');
 var debug     = require('gulp-debug');
 var config    = require('../config.json');
-var options   = require('minimist')(process.argv.slice(2));
+var argv      = require('yargs').argv;
 var gulpif    = require('gulp-if');
 
 // Specific task modules
@@ -11,7 +11,7 @@ var pngquant = require('imagemin-pngquant');
 
 gulp.task('img', function () {
   return gulp.src(config.paths.img + '{,**/}*.{png,jpg,gif,svg}')
-    .pipe(gulpif(options.debug === true, debug({title: 'Images Optimised:'})))
+    .pipe(gulpif(argv.debug === true, debug({title: 'Images Optimised:'})))
     .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],

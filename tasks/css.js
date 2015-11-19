@@ -2,7 +2,7 @@
 var gulp      = require('gulp');
 var debug     = require('gulp-debug');
 var config    = require('../config.json');
-var options   = require('minimist')(process.argv.slice(2));
+var argv      = require('yargs').argv;
 var gulpif    = require('gulp-if');
 
 // Specific task modules
@@ -13,24 +13,40 @@ var customProperties  = require('postcss-custom-properties');
 var autoprefixer      = require('autoprefixer');
 var pxtorem           = require('postcss-pxtorem');
 var mqpacker          = require('css-mqpacker');
+var cssnano           = require('cssnano');
 
 // Postcss processors
-var processors = [
-  atImport(),
-  customProperties(),
-  autoprefixer({ browsers: config.autoprefixer.browsers }),
-  pxtorem({
-    replace: true
-  }),
-  mqpacker()
-];
+if (argv.production) {
+  var processors = [
+    atImport(),
+    customProperties(),
+    autoprefixer({ browsers: config.autoprefixer.browsers }),
+    pxtorem({
+      replace: true
+    }),
+    mqpacker(),
+    cssnano()
+  ];
+}
+
+else {
+  var processors = [
+    atImport(),
+    customProperties(),
+    autoprefixer({ browsers: config.autoprefixer.browsers }),
+    pxtorem({
+      replace: true
+    }),
+    mqpacker()
+  ];
+}
 
 // Postcss task
 gulp.task('css', function () {
   return gulp.src(config.paths.css + '*.css')
-    .pipe(gulpif(options.debug === true, debug({title: 'CSS Processed:'})))
-    .pipe(gulpif(options.env !== 'production', sourcemaps.init())) // Sourcemaps if not on production flag
+    .pipe(gulpif(argv.debug === true, debug({title: 'CSS Processed:'})))
+    .pipe(gulpif(!argv.production, sourcemaps.init())) // Sourcemaps if there is no production flag
     .pipe(postcss(processors))
-    .pipe(gulpif(options.env !== 'production', sourcemaps.write('.'))) // Sourcemaps if not on production flag
+    .pipe(gulpif(!argv.production, sourcemaps.write('.'))) // Sourcemaps if there is no production flag
     .pipe(gulp.dest(config.paths.buildAssets + 'css'));
 });

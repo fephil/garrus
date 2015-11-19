@@ -2,7 +2,7 @@
 var gulp      = require('gulp');
 var debug     = require('gulp-debug');
 var config    = require('../config.json');
-var options   = require('minimist')(process.argv.slice(2));
+var argv      = require('yargs').argv;
 var gulpif    = require('gulp-if');
 
 // Specific task modules
