@@ -1,8 +1,9 @@
 # foley
-Version: x.x.x
+Version: 0.0.x
 
 [![Build Status](https://travis-ci.org/PJL101/foley.svg?branch=master)](https://travis-ci.org/PJL101/foley)
 [![devDependency Status](https://david-dm.org/PJL101/foley/dev-status.svg)](https://david-dm.org/PJL101/foley#info=devDependencies)
+[![Dependency Status](https://david-dm.org/PJL101/foley.svg)](https://david-dm.org/PJL101/foley)
 
 * Author: [Phil Lennon](http://iampjl.co.uk)
 * Source: [github.com/PJL101/foley](http://github.com/PJL101/foley)
@@ -11,21 +12,26 @@ Version: x.x.x
 
 -
 
-A modern frontend generator.
+A modern, opinionated frontend workflow for building a static website.
 
-## NOTE: This is in heavy development and is not ready for use. Please wait for a tagged release version.
+**Note:** This is in heavy development and is not ready for use. Please wait for a tagged release version.
 
 ### Usage
 
 * gulp [--production] [--debug]
 * gulp deploy [--production] [--debug]
 
-`--production` flag builds minified assets.
-`--debug` flag shows the files in each task (with a pipe).
+The `gulp` task builds the website and starts up a sever.
+
+The `gulp deploy` task builds the website without the server.
+
+The `--production` flag builds minified assets with no sourcemaps.
+
+The `--debug` flag shows the files being created in each task (if the task has a pipe).
 
 ### Credit
 
-Sample image from Unsplash.
-Sample icons from gulpicon.
+* Sample image from Unsplash.
+* Sample icons from gulpicon.
 
-Have a nice day!
+**Have a nice day!**
