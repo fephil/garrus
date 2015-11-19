@@ -6,8 +6,8 @@ var argv      = require('yargs').argv;
 var gulpif    = require('gulp-if');
 
 // Specific task modules
-var sourcemaps        = require('gulp-sourcemaps');
-var postcss           = require('gulp-postcss');
+var sourcemaps  = require('gulp-sourcemaps');
+var postcss     = require('gulp-postcss');
 
 // Postcss css4 specification modules
 var atImport          = require('postcss-import');
@@ -16,6 +16,7 @@ var nesting           = require('postcss-nesting');
 var calc              = require('postcss-calc');
 
 // Postcss workflow modules
+var lost          = require('lost');
 var autoprefixer  = require('autoprefixer');
 var pxtorem       = require('postcss-pxtorem');
 var mqpacker      = require('css-mqpacker');
@@ -28,6 +29,7 @@ if (argv.production) {
     customProperties(),
     nesting(),
     calc(),
+    lost(),
     autoprefixer({ browsers: config.autoprefixer.browsers }),
     pxtorem({
       replace: true
@@ -42,7 +44,8 @@ else {
     atImport(),
     customProperties(),
     nesting(),
-    calc(),    
+    calc(),
+    lost(),    
     autoprefixer({ browsers: config.autoprefixer.browsers }),
     pxtorem({
       replace: true
