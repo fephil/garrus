@@ -22,36 +22,22 @@ var pxtorem       = require('postcss-pxtorem');
 var mqpacker      = require('css-mqpacker');
 var cssnano       = require('cssnano');
 
-// Postcss processors
-if (argv.production) {
-  var processors = [
-    atImport(),
-    customProperties(),
-    nesting(),
-    calc(),
-    lost(),
-    autoprefixer({ browsers: config.autoprefixer.browsers }),
-    pxtorem({
-      replace: true
-    }),
-    mqpacker(),
-    cssnano()
-  ];
-}
+var processors = [
+  atImport(),
+  customProperties(),
+  nesting(),
+  calc(),
+  lost(),
+  autoprefixer({ browsers: config.autoprefixer.browsers }),
+  pxtorem({
+    replace: true
+  }),
+  mqpacker()
+];
 
-else {
-  var processors = [
-    atImport(),
-    customProperties(),
-    nesting(),
-    calc(),
-    lost(),    
-    autoprefixer({ browsers: config.autoprefixer.browsers }),
-    pxtorem({
-      replace: true
-    }),
-    mqpacker()
-  ];
+// Add cssnano if there is a production flag
+if (argv.production) {
+  processors.push(cssnano());
 }
 
 // Postcss task
