@@ -8,18 +8,26 @@ var gulpif    = require('gulp-if');
 // Specific task modules
 var sourcemaps        = require('gulp-sourcemaps');
 var postcss           = require('gulp-postcss');
+
+// Postcss css4 specification modules
 var atImport          = require('postcss-import');
 var customProperties  = require('postcss-custom-properties');
-var autoprefixer      = require('autoprefixer');
-var pxtorem           = require('postcss-pxtorem');
-var mqpacker          = require('css-mqpacker');
-var cssnano           = require('cssnano');
+var nesting           = require('postcss-nesting');
+var calc              = require('postcss-calc');
+
+// Postcss workflow modules
+var autoprefixer  = require('autoprefixer');
+var pxtorem       = require('postcss-pxtorem');
+var mqpacker      = require('css-mqpacker');
+var cssnano       = require('cssnano');
 
 // Postcss processors
 if (argv.production) {
   var processors = [
     atImport(),
     customProperties(),
+    nesting(),
+    calc(),
     autoprefixer({ browsers: config.autoprefixer.browsers }),
     pxtorem({
       replace: true
@@ -33,6 +41,8 @@ else {
   var processors = [
     atImport(),
     customProperties(),
+    nesting(),
+    calc(),    
     autoprefixer({ browsers: config.autoprefixer.browsers }),
     pxtorem({
       replace: true
