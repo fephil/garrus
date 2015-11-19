@@ -16,7 +16,7 @@ gulp.task('default', function(callback) {
     'clean',
     'metalsmith',
     ['svgicon', 'css', 'webpack', 'img', 'copy', 'html'],
-    'server',
+    'browsersync',
     callback
   );
 });

@@ -9,11 +9,11 @@ var gulpif    = require('gulp-if');
 var browserSync = require('browser-sync').create();
 
 // Browsersync task
-gulp.task('server', function () {
+gulp.task('browsersync', function () {
   browserSync.init({
+    notify: false,
     server: {
       baseDir: config.paths.build,
-      notify: false
     }
   });
 });
