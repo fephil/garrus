@@ -12,12 +12,22 @@ module.exports = {
     })
   ],
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        loader: 'standard',
+        exclude: /(node_modules|bower_components)/
+      }
+    ],
     loaders: [
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel'
+        loader: 'babel',
+        exclude: /(node_modules|bower_components)/
       }
-    ]
+    ],
+  },
+  standard: {
+    parser: 'babel-eslint'
   }
 };
