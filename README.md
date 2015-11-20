@@ -6,6 +6,7 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 **A modern, opinionated frontend workflow for building a static website.**
+
 Version: 0.0.1
 
 * Author: [Phil Lennon](http://iampjl.co.uk)
