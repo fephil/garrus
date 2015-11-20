@@ -15,6 +15,9 @@
   "engines": {
     "node": ">= 4"
   },
+  "scripts": {
+    "test": "gulp build --debug"
+  },
   "devDependencies": {
     "autoprefixer": "^6.1.0",
     "babel-core": "^6.2.0",
