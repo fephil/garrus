@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/PJL101/foley.svg)](https://david-dm.org/PJL101/foley)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-### A modern, opinionated frontend workflow for building a static website.
+**A modern, opinionated frontend workflow for building a static website.**
 Version: 0.0.1
 
 * Author: [Phil Lennon](http://iampjl.co.uk)
@@ -48,16 +48,13 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/foley
 
 ## Usage
 
-* `gulp [--production] [--debug]`
-* `gulp deploy [--production] [--debug]`
+`gulp [--production] [--debug]`
+`gulp deploy [--production] [--debug]`
 
-The `gulp` task builds the website, watches for changes and starts up a sever.
-
-The `gulp deploy` task builds the website and watches for changes without the server.
-
-The `--production` flag builds minified assets with no sourcemaps.
-
-The `--debug` flag shows the files being created in each task (if the task has a pipe).
+* The `gulp` task builds the website, watches for changes and starts up a sever.
+* The `gulp deploy` task builds the website and watches for changes without the server.
+* The `--production` flag builds minified assets with no sourcemaps.
+* The `--debug` flag shows the files being created in each task (if the task has a pipe).
 
 ## Known issues
 
