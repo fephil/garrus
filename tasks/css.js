@@ -1,11 +1,13 @@
-// Load gulp and global config
-var gulp      = require('gulp');
-var debug     = require('gulp-debug');
+// Load global config and gulp
 var config    = require('../config.json');
 var argv      = require('yargs').argv;
+var gulp      = require('gulp');
+var plumber   = require('gulp-plumber');
+var debug     = require('gulp-debug');
 var gulpif    = require('gulp-if');
 
 // Specific task modules
+var browserSync = require('browser-sync');
 var sourcemaps  = require('gulp-sourcemaps');
 var postcss     = require('gulp-postcss');
 
@@ -42,10 +44,11 @@ if (argv.production) {
 
 // Postcss task
 gulp.task('css', function () {
-  return gulp.src(config.paths.css + '*.css')
+  return gulp.src(config.paths.css + '**/*.css')
     .pipe(gulpif(argv.debug === true, debug({title: 'CSS Processed:'})))
     .pipe(gulpif(!argv.production, sourcemaps.init())) // Sourcemaps if there is no production flag
     .pipe(postcss(processors))
     .pipe(gulpif(!argv.production, sourcemaps.write('.'))) // Sourcemaps if there is no production flag
-    .pipe(gulp.dest(config.paths.buildAssets + 'css'));
+    .pipe(gulp.dest(config.paths.buildAssets + 'css'))
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });

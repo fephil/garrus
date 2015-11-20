@@ -1,5 +1,7 @@
-var webpack = require('webpack');
 var argv    = require('yargs').argv;
+var webpack = require('webpack');
+
+// Create plugins array
 var plugins = [
   new webpack.ProvidePlugin({
      $: "jquery",
@@ -7,7 +9,7 @@ var plugins = [
   })
 ];
 
-// Add Uglify task if there is a production flag
+// Add Uglify task to plugins array if there is a production flag
 if (argv.production) {
   plugins.push(new webpack.optimize.UglifyJsPlugin());
 }

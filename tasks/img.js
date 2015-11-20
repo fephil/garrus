@@ -1,13 +1,15 @@
-// Load gulp and global config
-var gulp      = require('gulp');
-var debug     = require('gulp-debug');
+// Load global config and gulp
 var config    = require('../config.json');
 var argv      = require('yargs').argv;
+var gulp      = require('gulp');
+var plumber   = require('gulp-plumber');
+var debug     = require('gulp-debug');
 var gulpif    = require('gulp-if');
 
 // Specific task modules
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
+var browserSync = require('browser-sync');
+var imagemin    = require('gulp-imagemin');
+var pngquant    = require('imagemin-pngquant');
 
 gulp.task('img', function () {
   return gulp.src(config.paths.img + '{,**/}*.{png,jpg,gif,svg}')
@@ -17,5 +19,6 @@ gulp.task('img', function () {
         svgoPlugins: [{removeViewBox: false}],
         use: [pngquant()]
     }))
-    .pipe(gulp.dest(config.paths.buildAssets + 'img'));
+    .pipe(gulp.dest(config.paths.buildAssets + 'img'))
+    .pipe(browserSync.stream());
 });
