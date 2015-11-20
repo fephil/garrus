@@ -28,6 +28,7 @@
     "css-mqpacker": "^4.0.0",
     "cssnano": "^3.3.2",
     "del": "^2.1.0",
+    "glob": "^6.0.1",
     "gulp": "^3.9.0",
     "gulp-debug": "^2.1.2",
     "gulp-htmlmin": "^1.2.0",
