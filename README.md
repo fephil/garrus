@@ -1,5 +1,4 @@
 # foley
-Version: 0.0.1
 
 [![Build Status](https://travis-ci.org/PJL101/foley.svg?branch=master)](https://travis-ci.org/PJL101/foley)
 [![devDependency Status](https://david-dm.org/PJL101/foley/dev-status.svg)](https://david-dm.org/PJL101/foley#info=devDependencies)
@@ -7,6 +6,7 @@ Version: 0.0.1
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ### A modern, opinionated frontend workflow for building a static website.
+Version: 0.0.1
 
 * Author: [Phil Lennon](http://iampjl.co.uk)
 * Source: [github.com/PJL101/foley](http://github.com/PJL101/foley)
@@ -17,8 +17,6 @@ Version: 0.0.1
 -
 
 **Note:** This is in heavy development and is not ready for production use. Please wait for version 0.1.0
-
---
 
 ## About
 
@@ -46,12 +44,12 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/foley
 * Install Node 4 LTS or 5 stable. Other versions may work but this has not been tested,
 * run `npm i gulp -g`,
 * Navigate to the workflow folder in command line terminal,
-* run `npm i`,
+* run `npm i`.
 
 ## Usage
 
-* gulp [--production] [--debug]
-* gulp deploy [--production] [--debug]
+* `gulp [--production] [--debug]`
+* `gulp deploy [--production] [--debug]`
 
 The `gulp` task builds the website, watches for changes and starts up a sever.
 
