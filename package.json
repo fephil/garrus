@@ -1,7 +1,7 @@
 {
   "name": "foley",
   "description": "A modern, opinionated frontend workflow for building a static website",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "author": "Phil Lennon <enquiry@iampjl.co.uk>",
   "private": true,
   "license": "MIT",
@@ -13,7 +13,7 @@
     "url": "https://github.com/PJL101/foley/issues"
   },
   "engines": {
-    "node": ">= 0.12"
+    "node": ">= 4"
   },
   "devDependencies": {
     "autoprefixer": "^6.1.0",
