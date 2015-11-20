@@ -16,7 +16,7 @@
     "node": ">= 4"
   },
   "scripts": {
-    "test": "gulp build --debug"
+    "test": "gulp deploy --debug"
   },
   "devDependencies": {
     "autoprefixer": "^6.1.0",
