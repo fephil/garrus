@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.1.0",
-    "babel-core": "^6.2.0",
+    "babel-core": "^6.2.1",
     "babel-eslint": "^4.1.5",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
@@ -39,7 +39,7 @@
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
     "gulpicon": "^0.1.2",
-    "handlebars": "^4.0.4",
+    "handlebars": "^4.0.5",
     "handlebars-layouts": "^3.1.3",
     "imagemin-pngquant": "^4.2.0",
     "lost": "^6.6.2",
@@ -52,7 +52,7 @@
     "postcss-nesting": "^2.0.6",
     "postcss-pxtorem": "^3.1.0",
     "require-dir": "^0.3.0",
-    "run-sequence": "^1.1.4",
+    "run-sequence": "^1.1.5",
     "standard-loader": "^2.0.0",
     "webpack": "^1.12.6",
     "yargs": "^3.30.0"
