@@ -23,20 +23,22 @@ Version: 0.0.1
 
 This workflow contains:
 
-* Easy configuration from global files
-* Gulp
-* Metalsmith (static website and blog generator)
-* Handlebars & Handlebars Layouts integration
-* Webpack with jQuery integration
-* Babel (ES2015 support)
-* Standardjs linting
-* PostCSS (with several plugins)
-* Lost grid system
-* Image minification
-* Gulpicon
-* HTML minification
+* Easy to use with configuration from global files,
+* Gulp,
+* Metalsmith (static website and blog generator),
+* Handlebars & Handlebars Layouts integration,
+* Webpack with jQuery integration,
+* Babel (ES2015 support),
+* Standardjs linting,
+* PostCSS (with several plugins),
+* Lost grid system,
+* Image minification,
+* Gulpicon,
+* HTML minification.
 
-Use foley as a base to tailor to your specific needs. Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/PJL101/foley/issues) for more information about future enhancements and changes.
+Use foley as a base to tailor to your specific needs.
+
+Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/PJL101/foley/issues) for more information about future enhancements and changes.
 
 ## Install
 
@@ -50,11 +52,12 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/foley
 ## Usage
 
 `gulp [--production] [--debug]`
+
 `gulp deploy [--production] [--debug]`
 
-* The `gulp` task builds the website, watches for changes and starts up a sever.
-* The `gulp deploy` task builds the website and watches for changes without the server.
-* The `--production` flag builds minified assets with no sourcemaps.
+* The `gulp` task builds the website, watches for changes and starts up a sever,
+* The `gulp deploy` task builds the website and watches for changes without the server,
+* The `--production` flag builds minified assets with no sourcemaps,
 * The `--debug` flag shows the files being created in each task (if the task has a pipe).
 
 ## Known issues
