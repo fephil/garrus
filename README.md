@@ -30,8 +30,8 @@ This workflow contains:
 * Webpack with jQuery integration,
 * Babel (ES2015 support),
 * Standardjs linting,
-* PostCSS (with several plugins),
-* Lost grid system,
+* Sass & PostCSS,
+* Sass-mq & Susy grid system,
 * Image minification,
 * Gulpicon,
 * HTML minification.
@@ -65,7 +65,7 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/foley
 * Gulpicon assets are not automatically copied into website,
 * Blog support with Markdown, permalinks, etc is not available,
 * Example JS files do not adhere to standardjs or ES2015,
-* Task logging doesn't output correctly,
+* Task logging needs to be improved,
 * No proper documentation,
 * No proper example code.
 
