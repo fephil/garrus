@@ -9,10 +9,11 @@ Thumbs.db
 
 # foley #
 ######################
-*node_modules
-npm-debug.log
+node_modules
+eyeglass_cache
 _svgicon
 _dist
+npm-debug.log
 
 # Project Specific #
 ######################

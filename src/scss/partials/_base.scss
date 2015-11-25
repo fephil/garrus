@@ -1,4 +1,4 @@
-/* Apply a natural box layout model to all elements, but allowing components to change */
+// Apply a natural box layout model to all elements, but allowing components to change
 html {
   box-sizing: border-box;
 }
@@ -11,6 +11,7 @@ html {
 
 html {
   font-size: 100%;
+
   -webkit-font-smoothing: antialiased;
           font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,17 +19,17 @@ html {
 }
 
 body {
-  font-size: 16px;
+  font-size: $base-font-size;
 }
 
-/* Make sure embeds and iframes fit their responsive containers */
+// Make sure embeds and iframes fit their responsive containers
 embed,
 iframe,
 object {
   max-width: 100%;
 }
 
-/* Responsive images */
+// Responsive images
 img {
   max-width: 100%;
   height: auto;
@@ -49,30 +50,37 @@ button {
 }
 
 /*
-  * Hide only visually, but have it available for screen readers:
-  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*/
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
 .hide-screen {
   position: absolute;
+
   overflow: hidden;
   clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
+
   border: 0;
 }
 
 /*
-  * Extends the .visuallyhidden class to allow the element
-  * to be focusable when navigated to via the keyboard:
-  * https://www.drupal.org/node/897638
-*/
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
 .hide-screen.focusable:active,
 .hide-screen.focusable:focus {
   position: static;
+
   overflow: visible;
   clip: auto;
+
   width: auto;
   height: auto;
   margin: 0;
