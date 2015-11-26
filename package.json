@@ -51,7 +51,7 @@
     "postcss-pxtorem": "^3.1.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
-    "sass-mq": "github:pjl101/sass-mq",
+    "sass-mq": "^3.2.5",
     "standard-loader": "^2.0.0",
     "susy": "^2.2.6",
     "webpack": "^1.12.6",
