@@ -50,7 +50,7 @@ gulp.task('rebuildMetalsmith', function(callback) {
 
 // Watch task
 gulp.task('watch', function(callback) {
-  gulp.watch(config.paths.css + '**/*.scss', ['scss']);
+  gulp.watch(config.paths.scss + '**/*.scss', ['scss']);
   gulp.watch(config.paths.js + '**/*.js', ['rebuildJs']);
   gulp.watch(config.paths.img + '{,**/}*.{png,jpg,gif,svg}', ['img']);
   gulp.watch(config.paths.icons + '**/*.svg', ['svgicon']);
