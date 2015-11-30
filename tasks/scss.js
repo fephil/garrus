@@ -32,6 +32,7 @@ var processors = [
   mqpacker(),
   stylelint({
     // add config file path - add to this config file
+    // @see {@Link https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md}
     extends: [
       './tasks/config/.stylelint.json'
     ]
