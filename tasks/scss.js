@@ -31,9 +31,9 @@ var processors = [
   }),
   mqpacker(),
   stylelint({
-    // add config file path
+    // add config file path - add to this config file
     extends: [
-      "./tasks/config/.stylelint.json"
+      './tasks/config/.stylelint.json'
     ]
   }),
   reporter({
