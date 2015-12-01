@@ -31,6 +31,7 @@ This workflow contains:
 * Babel (ES2015 support),
 * Standardjs linting,
 * Sass & PostCSS,
+* Critical inlined CSS,
 * Sass-mq & Susy grid system,
 * Image minification,
 * Gulpicon,
@@ -62,6 +63,7 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/foley
 
 ## Known issues
 
+* Critical inline CSS only happens on the deploy task,
 * Gulpicon assets are not automatically copied into website,
 * Blog support with Markdown, permalinks, etc is not available,
 * Example JS files do not adhere to standardjs or ES2015,

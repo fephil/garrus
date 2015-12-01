@@ -75,6 +75,7 @@ gulp.task('deploy', function(callback) {
   runSequence(
     'clean',
     'assets',
+    'crticalcss',    
     callback
   );
 });
