@@ -2,7 +2,7 @@
   padding: 0 $site-gutter;
 
   @include container($grid-mobile);
-  @include mq($from: tablet) {
+  @include mq($from: m) {
     @include container($grid-tablet);
   }
 }
