@@ -21,13 +21,25 @@ var autoprefixer  = require('autoprefixer');
 var pxtorem       = require('postcss-pxtorem');
 var mqpacker      = require('css-mqpacker');
 var cssnano       = require('cssnano');
+var stylelint     = require('stylelint');
+var reporter      = require('postcss-reporter');
 
 var processors = [
   autoprefixer({ browsers: config.autoprefixer.browsers }),
   pxtorem({
     replace: true
   }),
-  mqpacker()
+  mqpacker(),
+  stylelint({
+    // add config file path - add to this config file
+    // @see {@Link https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md}
+    extends: [
+      './tasks/config/.stylelint.json'
+    ]
+  }),
+  reporter({
+    clearMessages: true
+  })
 ];
 
 // Add cssnano if there is a production flag
