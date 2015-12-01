@@ -12,13 +12,10 @@ $mq-responsive: true;
 // stakeholders, designers, developers, and testers.
 $mq-breakpoints: (
   xs:  320px,
-  s: 480px,
-  m:  740px,
-  l: 980px,
-  xl:    1300px,
-
-  // Tweakpoints
-  m-ad: 810px
+  s:   480px,
+  m:   740px,
+  l:   980px,
+  xl:  1300px,
 );
 
 // Define the breakpoint from the $mq-breakpoints list that should
@@ -35,12 +32,13 @@ $mq-show-breakpoints: (xs, s, m, l, xl);
 // -----------------------------
 
 $base-font-size: 16px; // Recommended to not change this
-$site-container: 61.25rem; // 980px
-$site-gutter: 1.25rem; // 20px
+$site-container: 81.25rem; // 1300px
+$site-gutter: 1rem; // 16px
 $grid-gutter: .25; // Quarter of column width
-$mobile-column: 4;
-$tablet-column: 12;
-$grid-debug: show;
+$column-small: 6;
+$column-large: 12;
+$grid-debug: show; // Change this to show or hide
+
 
 // Colours
 $brand-a: rgba(50, 120, 50, 1);
@@ -55,38 +53,13 @@ $font-headline-weight: 700;
 // Default Grid Options
 // -----------------------------
 
-$grid-mobile: (
-  columns: $mobile-column,
-  gutters: $grid-gutter,
-  global-box-sizing: border-box,
-  debug: (
-    image: $grid-debug,
-    color: rgba(#6666ff, .25),
-    output: background,
-  ),
-  use-custom: (
-    background-image: false,
-    background-options: false,
-    box-sizing: false,
-    clearfix: true,
-    rem: false,
-  )
-);
-$grid-tablet: (
-  columns: $tablet-column,
-  gutters: $grid-gutter,
-  global-box-sizing: border-box,
+$susy: (
+  columns: $column-small,
   container: $site-container,
+  gutters: $grid-gutter,
+  global-box-sizing: border-box,
+  gutter-position: split,
   debug: (
-    image: $grid-debug,
-    color: rgba(#6666ff, .25),
-    output: background,
-  ),
-  use-custom: (
-    background-image: false,
-    background-options: false,
-    box-sizing: false,
-    clearfix: true,
-    rem: false,
+    image: $grid-debug
   )
 );
