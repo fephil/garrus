@@ -35,8 +35,8 @@ $mq-show-breakpoints: (xs, s, m, l, xl);
 // -----------------------------
 
 $base-font-size: 16px; // Recommended to not change this
-$site-container: 61.25rem; // 980px
-$site-gutter: 1.25rem; // 20px
+$site-container: em(980px);
+$site-gutter: em(20px);
 $grid-gutter: .25; // Quarter of column width
 $mobile-column: 4;
 $tablet-column: 12;
