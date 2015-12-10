@@ -1,8 +1,9 @@
-// NPM require
-var Holder = require('holderjs');
-var FastClick = require('fastclick');
+/* global $ */
 
-FastClick.attach(document.body);
+var Holder = require('holderjs') //eslint-disable-line
+var FastClick = require('fastclick')
 
-console.log('testing if jquery is loaded globally:');
-console.log($);
+FastClick.attach(document.body)
+
+console.log('testing if jquery is loaded globally:')
+console.log($)
