@@ -75,7 +75,7 @@ The following plugins for Atom are recommended but not required:
 
 * The `gulp` task builds the website, watches for changes and starts up a sever,
 * The `gulp deploy` task builds the website without watching for changes or running the server,
-* The `gulp audit` task runs various linting on the project source files.
+* The `gulp auditcode` task runs various linting on the project source files.
 
 ### Flags
 

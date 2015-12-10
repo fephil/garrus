@@ -81,9 +81,17 @@ gulp.task('deploy', function(callback) {
 });
 
 // Run the audit task to check the code
-gulp.task('audit', function(callback) {
+gulp.task('auditcode', function(callback) {
   runSequence(
     'scssLint',
+    callback
+  );
+});
+
+// Run the audit task to check the built website
+gulp.task('auditsite', function(callback) {
+  runSequence(
+    'deploy',
     callback
   );
 });
