@@ -49,7 +49,13 @@ if (argv.production) {
 // figure out how to make them work together.
 eyeglass.enableImportOnce = false;
 
-// Postcss task
+// Stylelint task
+gulp.task('scssLint', function () {
+  return gulp.src([config.paths.scss + '**/*.scss', '!' + config.paths.scss + 'vendor{,/**}'])
+    .pipe(postcss(workflow, {syntax: scss}))
+});
+
+// Sass & Postcss task
 gulp.task('scss', function () {
   return gulp.src(config.paths.scss + '**/*.scss')
     .pipe(gulpif(argv.debug === true, debug({title: 'CSS Processed:'})))
@@ -59,9 +65,4 @@ gulp.task('scss', function () {
     .pipe(gulpif(!argv.production, sourcemaps.write('.'))) // Sourcemaps if there is no production flag
     .pipe(gulp.dest(config.paths.buildAssets + 'css'))
     .pipe(browserSync.stream({match: '**/*.css'}))
-});
-
-gulp.task('scssLint', function () {
-  return gulp.src(config.paths.scss + '**/*.scss')
-    .pipe(postcss(workflow, {syntax: scss}))
 });
