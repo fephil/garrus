@@ -51,6 +51,8 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/foley
 * Navigate to the workflow folder in command line terminal,
 * run `npm i`.
 
+Please note, there are a large amount of development dependencies to install due to the 'all in one' nature of this workflow. It takes several minutes to install the modules.
+
 ### Optional Installs
 
 The following plugins for Atom are recommended but not required:
