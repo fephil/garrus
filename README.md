@@ -51,6 +51,18 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/foley
 * Navigate to the workflow folder in command line terminal,
 * run `npm i`.
 
+### Optional Installs
+
+The following plugins for Atom are recommended but not required:
+
+* atom-handlebars,
+* editorconfig,
+* linter,
+* linter-handlebars,
+* linter-js-standard,
+* linter-stylelint,
+* tabs-to-spaces.
+
 ## Usage
 
 `gulp [--production] [--debug]`
