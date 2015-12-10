@@ -71,7 +71,7 @@ The following plugins for Atom are recommended but not required:
 
 `gulp deploy [--production] [--debug]`
 
-`gulp audit`
+`gulp auditcode`
 
 ### Tasks
 
