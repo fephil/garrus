@@ -83,12 +83,13 @@ gulp.task('deploy', function(callback) {
 // Run the audit task to check the code
 gulp.task('auditcode', function(callback) {
   runSequence(
-    'scssLint',
+    'scsslint',
     callback
   );
 });
 
 // Run the audit task to check the built website
+// NOTE: Not used yet
 gulp.task('auditsite', function(callback) {
   runSequence(
     'deploy',

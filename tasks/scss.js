@@ -50,7 +50,7 @@ if (argv.production) {
 eyeglass.enableImportOnce = false;
 
 // Stylelint task
-gulp.task('scssLint', function () {
+gulp.task('scsslint', function () {
   return gulp.src([config.paths.scss + '**/*.scss', '!' + config.paths.scss + 'vendor{,/**}'])
     .pipe(postcss(workflow, {syntax: scss}))
 });
