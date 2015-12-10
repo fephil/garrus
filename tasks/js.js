@@ -10,8 +10,17 @@ var gulpif  = require('gulp-if');
 var gutil         = require('gulp-util');
 var webpack       = require('webpack');
 var webpackConfig = require(__dirname + '/config/webpack.config.js');
+var standard      = require('gulp-standard');
 
-// JS task
+gulp.task('jslint', function () {
+  return gulp.src(config.paths.js + '**/*.js')
+    .pipe(standard())
+    .pipe(standard.reporter('default', {
+      breakOnError: false
+    }))
+})
+
+// Webpack task
 gulp.task('webpack', function (callback) {
   webpack(webpackConfig, function(err, stats) {
     if(err) throw new gutil.PluginError('webpack', err);

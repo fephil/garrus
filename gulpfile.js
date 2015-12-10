@@ -84,6 +84,7 @@ gulp.task('deploy', function(callback) {
 gulp.task('auditcode', function(callback) {
   runSequence(
     'scsslint',
+    'jslint',    
     callback
   );
 });

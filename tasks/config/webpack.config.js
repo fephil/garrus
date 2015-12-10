@@ -21,13 +21,6 @@ module.exports = {
   },
   plugins: plugins,
   module: {
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        loader: 'standard',
-        exclude: /(node_modules|bower_components)/
-      }
-    ],
     loaders: [
       {
         test: /\.jsx?$/,
