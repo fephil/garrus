@@ -75,7 +75,15 @@ gulp.task('deploy', function(callback) {
   runSequence(
     'clean',
     'assets',
-    'crticalcss',    
+    'crticalcss',
+    callback
+  );
+});
+
+// Run the audit task to check the code
+gulp.task('audit', function(callback) {
+  runSequence(
+    'scssLint',
     callback
   );
 });
