@@ -1,5 +1,4 @@
 // Media Queries
-// -----------------------------
 
 // To enable support for browsers that do not support @media queries,
 // (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
@@ -29,11 +28,9 @@ $mq-static-breakpoint: l;
 $mq-show-breakpoints: (xs, s, m, l, xl);
 
 // Site Variables
-// -----------------------------
-
 $base-font-size: 16px; // Recommended to not change this
-$site-container: em(980px);
-$site-gutter: em(20px);
+$site-container: rem(1300px);
+$site-gutter: rem(20px);
 $grid-gutter: .25; // Quarter of column width
 $column-small: 6;
 $column-large: 12;
