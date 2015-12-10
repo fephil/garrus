@@ -31,6 +31,7 @@ This workflow contains:
 * Babel (ES2015 support),
 * Standardjs linting,
 * Sass & PostCSS,
+* CSS Stylelint with SUIT ruleset,
 * Critical inlined CSS,
 * Sass-mq & Susy grid system,
 * Image minification,

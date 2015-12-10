@@ -17,34 +17,32 @@ var sassOptions = {}; // put whatever eyeglass and node-sass options you need he
 var eyeglass    = new Eyeglass(sassOptions);
 
 // Postcss workflow modules
+var scss          = require('postcss-scss');
+var reporter      = require('postcss-reporter');
+var stylelint     = require('stylelint');
+
+// Postcss output modules
 var autoprefixer  = require('autoprefixer');
 var pxtorem       = require('postcss-pxtorem');
 var mqpacker      = require('css-mqpacker');
 var cssnano       = require('cssnano');
-var stylelint     = require('stylelint');
-var reporter      = require('postcss-reporter');
 
-var processors = [
+// Workflow specific plugins
+var workflow = [
+  stylelint({ extends: [ './tasks/config/.stylelint.json' ] }),
+  reporter({ clearMessages: true })
+];
+
+// Output specific plugins
+var output = [
   autoprefixer({ browsers: config.autoprefixer.browsers }),
-  pxtorem({
-    replace: true
-  }),
+  pxtorem({ replace: true }),
   mqpacker(),
-  stylelint({
-    // add config file path - add to this config file
-    // @see {@Link https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md}
-    extends: [
-      './tasks/config/.stylelint.json'
-    ]
-  }),
-  reporter({
-    clearMessages: true
-  })
 ];
 
 // Add cssnano if there is a production flag
 if (argv.production) {
-  processors.push(cssnano());
+  output.push(cssnano());
 }
 
 // Disable import once with gulp until we
@@ -57,8 +55,13 @@ gulp.task('scss', function () {
     .pipe(gulpif(argv.debug === true, debug({title: 'CSS Processed:'})))
     .pipe(gulpif(!argv.production, sourcemaps.init())) // Sourcemaps if there is no production flag
     .pipe(sass(eyeglass.sassOptions()).on('error', sass.logError))
-    .pipe(postcss(processors))
+    .pipe(postcss(output))
     .pipe(gulpif(!argv.production, sourcemaps.write('.'))) // Sourcemaps if there is no production flag
     .pipe(gulp.dest(config.paths.buildAssets + 'css'))
-    .pipe(browserSync.stream({match: '**/*.css'}));
+    .pipe(browserSync.stream({match: '**/*.css'}))
+});
+
+gulp.task('scssLint', function () {
+  return gulp.src(config.paths.scss + '**/*.scss')
+    .pipe(postcss(workflow, {syntax: scss}))
 });
