@@ -57,8 +57,16 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/foley
 
 `gulp deploy [--production] [--debug]`
 
+`gulp audit`
+
+### Tasks
+
 * The `gulp` task builds the website, watches for changes and starts up a sever,
 * The `gulp deploy` task builds the website without watching for changes or running the server,
+* The `gulp audit` task runs various linting on the project source files.
+
+### Flags
+
 * The `--production` flag builds minified assets with no sourcemaps,
 * The `--debug` flag shows the files being created in each task (if the task has a pipe).
 
