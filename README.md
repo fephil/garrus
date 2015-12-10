@@ -7,7 +7,7 @@
 
 **A modern, opinionated frontend workflow for building a static website.**
 
-Version: 0.0.3
+Version: 0.0.4
 
 * Author: [Phil Lennon](http://iampjl.co.uk)
 * Source: [github.com/PJL101/foley](http://github.com/PJL101/foley)
