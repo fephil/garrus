@@ -15,36 +15,27 @@ var runSequence  = require('run-sequence');
 var browserSync = require('browser-sync');
 var watch       = require('gulp-watch');
 
-// Assets task. Metalsmith needs to run first
-gulp.task('assets', function(callback) {
-  runSequence(
-    'metalsmith',
-    ['svgicon', 'scss', 'webpack', 'img', 'copy', 'html'],
-    callback
-  );
-});
-
 // BrowserSync reload task
 gulp.task('reload', function(callback) {
   browserSync.reload();
   callback();
 });
 
-// Rebuild JS task.
-// We need to manually reload BrowserSync after
-gulp.task('rebuildJs', function(callback) {
+// Assets task. Metalsmith needs to run first
+gulp.task('assets', function(callback) {
   runSequence(
-    'webpack',
+    'metalsmith',
+    ['svgicon', 'scss', 'webpack', 'img', 'copy', 'html'],
     'reload',
     callback
   );
 });
 
-// Rebuild Metalsmith task. Needed because Metalsmith doesn't do incrimental builds
+// Rebuild JS task.
 // We need to manually reload BrowserSync after
-gulp.task('rebuildMetalsmith', function(callback) {
+gulp.task('rebuildjs', function(callback) {
   runSequence(
-    'assets',
+    'webpack',
     'reload',
     callback
   );
@@ -53,10 +44,10 @@ gulp.task('rebuildMetalsmith', function(callback) {
 // Watch task
 gulp.task('watch', function(callback) {
   gulp.watch(config.paths.scss + '**/*.scss', ['scss']);
-  gulp.watch(config.paths.js + '**/*.js', ['rebuildJs']);
+  gulp.watch(config.paths.js + '**/*.js', ['rebuildjs']);
   gulp.watch(config.paths.img + '{,**/}*.{png,jpg,gif,svg}', ['img']);
   gulp.watch(config.paths.icons + '**/*.svg', ['svgicon']);
-  gulp.watch([config.paths.pages + '**/*.hbs', config.paths.partials + '**/*.hbs'], ['rebuildMetalsmith']);
+  gulp.watch([config.paths.pages + '**/*.hbs', config.paths.partials + '**/*.hbs'], ['assets']);
 });
 
 // Build website with development assets and run server with live reloading
@@ -84,7 +75,7 @@ gulp.task('deploy', function(callback) {
 gulp.task('auditcode', function(callback) {
   runSequence(
     'scsslint',
-    'jslint',    
+    'jslint',
     callback
   );
 });
