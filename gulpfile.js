@@ -80,9 +80,18 @@ gulp.task('auditcode', function(callback) {
   );
 });
 
-// Run the audit task to check the built website
+// Run the audit task to check the built website for accessibility 
 // NOTE: Not used yet
 gulp.task('auditsite', function(callback) {
+  runSequence(
+    'deploy',
+    callback
+  );
+});
+
+// Run the audit task to check performance using ...
+// NOTE: Not used yet
+gulp.task('auditperf', function(callback) {
   runSequence(
     'deploy',
     callback
