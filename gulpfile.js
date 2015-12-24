@@ -1,5 +1,5 @@
 // Load global config and gulp
-var config  = require(__dirname + '/tasks/config/foley.json');
+var config  = require(__dirname + '/foley.json');
 var argv    = require('yargs').argv;
 var gulp    = require('gulp');
 var plumber = require('gulp-plumber');
@@ -24,7 +24,7 @@ gulp.task('reload', function(callback) {
 // Assets task
 gulp.task('assets', function(callback) {
   runSequence(
-    ['hugo', 'html'],    
+    ['hugo', 'html'],
     ['svgicon', 'scss', 'webpack', 'img', 'copy'],
     'reload',
     callback
