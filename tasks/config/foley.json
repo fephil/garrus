@@ -14,13 +14,5 @@
   },
   "autoprefixer": {
     "browsers": ["last 2 versions", "IE >= 10"]
-  },
-  "metalsmith": {
-    "plugins": {
-      "metalsmith-in-place": {
-        "engine": "handlebars",
-        "partials": "./src/partials"
-      }
-    }
   }
 }
