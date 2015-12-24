@@ -21,12 +21,12 @@ Version: 0.1.0
 
 ## About
 
-Foley is an 'all-in-one' workflow to quickly build an optimised website and blog using the latest techniques in Frontend development. Use foley as a base and tailor to your specific needs.
+Foley is an 'all-in-one' workflow designed to quickly build an optimised website and blog using the latest techniques in Frontend development. Use foley as a base and tailor to your specific needs.
 
 This workflow contains:
 
 * Gulp,
-* Hugo (Super fast static website and blog generator),
+* Hugo (Super fantastic static website and blog generator),
 * Webpack with jQuery integration,
 * Babel with ES2015 support,
 * Standardjs linting,
