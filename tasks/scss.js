@@ -45,10 +45,6 @@ if (argv.production) {
   output.push(cssnano())
 }
 
-// Disable import once with gulp until we
-// figure out how to make them work together.
-eyeglass.enableImportOnce = false
-
 // Stylelint task
 gulp.task('scsslint', function () {
   return gulp.src([config.paths.scss + '**/*.scss', '!' + config.paths.scss + 'vendor{,/**}'])
