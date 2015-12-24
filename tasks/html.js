@@ -1,13 +1,13 @@
 // Load global config and gulp
-var config  = require(__dirname + '/../foley.json');
-var argv    = require('yargs').argv;
-var gulp    = require('gulp');
-var plumber = require('gulp-plumber');
-var debug   = require('gulp-debug');
-var gulpif  = require('gulp-if');
+var config = require(__dirname + '/../foley.json')
+var argv = require('yargs').argv
+var gulp = require('gulp')
+var plumber = require('gulp-plumber')
+var debug = require('gulp-debug')
+var gulpif = require('gulp-if')
 
 // Specific task modules
-var htmlmin = require('gulp-htmlmin');
+var htmlmin = require('gulp-htmlmin')
 
 // HTML minify task
 gulp.task('html', function () {
@@ -18,5 +18,5 @@ gulp.task('html', function () {
         collapseWhitespace: true
       })
     ))
-    .pipe(gulp.dest(config.paths.build));
-});
+    .pipe(gulp.dest(config.paths.build))
+})
