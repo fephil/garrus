@@ -1,6 +1,6 @@
 {
   "name": "foley",
-  "description": "A modern, opinionated frontend workflow for building a static website",
+  "description": "A modern, opinionated frontend workflow for building a static website and blog",
   "version": "0.0.4",
   "author": "Phil Lennon <enquiry@iampjl.co.uk>",
   "private": true,
@@ -14,9 +14,6 @@
   },
   "engines": {
     "node": ">= 4"
-  },
-  "scripts": {
-    "test": "gulp deploy --debug"
   },
   "devDependencies": {
     "autoprefixer": "^6.2.1",
@@ -39,17 +36,13 @@
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^6.0.1",
     "gulp-sass": "^2.1.1",
+    "gulp-shell": "^0.5.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-standard": "^5.2.2",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
     "gulpicon": "^0.1.2",
-    "handlebars": "^4.0.5",
-    "handlebars-layouts": "^3.1.3",
     "imagemin-pngquant": "^4.2.0",
-    "metalsmith": "^2.1.0",
-    "metalsmith-in-place": "^1.3.2",
-    "metalsmith-rename": "^1.0.0",
     "path": "^0.12.7",
     "postcss-pxtorem": "^3.3.1",
     "postcss-reporter": "^1.3.0",

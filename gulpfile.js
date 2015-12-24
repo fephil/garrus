@@ -21,11 +21,11 @@ gulp.task('reload', function(callback) {
   callback();
 });
 
-// Assets task. Metalsmith needs to run first
+// Assets task
 gulp.task('assets', function(callback) {
   runSequence(
-    'metalsmith',
-    ['svgicon', 'scss', 'webpack', 'img', 'copy', 'html'],
+    ['hugo', 'html'],    
+    ['svgicon', 'scss', 'webpack', 'img', 'copy'],
     'reload',
     callback
   );
@@ -80,7 +80,7 @@ gulp.task('auditcode', function(callback) {
   );
 });
 
-// Run the audit task to check the built website for accessibility 
+// Run the audit task to check the built website for accessibility
 // NOTE: Not used yet
 gulp.task('auditsite', function(callback) {
   runSequence(

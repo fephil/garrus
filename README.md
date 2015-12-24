@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/PJL101/foley.svg)](https://david-dm.org/PJL101/foley)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-**A modern, opinionated frontend workflow for building a static website.**
+**A modern, opinionated frontend workflow for building a static website and blog.**
 
 Version: 0.0.4
 
@@ -25,10 +25,9 @@ This workflow contains:
 
 * Easy to use with configuration from global files,
 * Gulp,
-* Metalsmith (static website and blog generator),
-* Handlebars & Handlebars Layouts integration,
+* Hugo (Super fast static website and blog generator),
 * Webpack with jQuery integration,
-* Babel (ES2015 support),
+* Babel with ES2015 support,
 * Standardjs linting,
 * Sass & PostCSS,
 * CSS Stylelint with SUIT ruleset,
@@ -46,7 +45,8 @@ Comments, suggestions & pull requests are always welcome. See the [issues list](
 
 Download the latest stable release from [GitHub](https://github.com/PJL101/foley/releases). Once this has been done:
 
-* Install Node 4 LTS or 5 stable. Other versions may work but this has not been tested,
+* **TODO: ADD GO INSTRUCTIONS**
+* Install Node 4 LTS or 5 stable (preferred). Other versions may work but this has not been tested,
 * run `npm i gulp -g`,
 * Navigate to the workflow folder in command line terminal,
 * run `npm i`.
@@ -88,8 +88,7 @@ The following plugins for Atom are recommended but not required:
 
 * Critical inline CSS only happens on the deploy task,
 * Gulpicon assets are not automatically copied into website,
-* Blog support with Markdown, permalinks, etc is not available,
-* Example JS files do not adhere to standardjs or ES2015,
+* Example JS files do not adhere to ES2015,
 * Task logging needs to be improved,
 * No proper documentation,
 * No proper example code.
