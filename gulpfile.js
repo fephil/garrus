@@ -21,11 +21,11 @@ gulp.task('reload', function(callback) {
   callback();
 });
 
-// Assets task. Hugo needs to run first
+// Assets task
 gulp.task('assets', function(callback) {
   runSequence(
-    'hugo',
-    ['svgicon', 'scss', 'webpack', 'img', 'copy', 'html'],
+    ['hugo', 'html'],    
+    ['svgicon', 'scss', 'webpack', 'img', 'copy'],
     'reload',
     callback
   );

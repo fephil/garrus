@@ -3,24 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>{{title}}</title>
-    <meta name="description" content="{{description}}" />
+    <title>hardcode title</title>
+    <meta name="description" content="hardcode description" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="assets/css/site.css" />
   </head>
   <body>
-    {{#block "header"}}
-      {{> header}}
-    {{/block}}
+    {{ partial "header.html" . }}
 
-    {{#block "main"}}
-      {{{contents}}}
-    {{/block}}
+    {{ range .Data.Pages }}
+      {{ if eq .Type "index" }}
+        {{ .Content }}
+      {{ end }}
+    {{ end }}
 
-    {{#block "footer"}}
-      {{> footer}}
-    {{/block}}
+    {{ partial "footer.html" . }}
 
     <script src="assets/js/bundle.js"></script>
   </body>

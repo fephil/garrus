@@ -11,6 +11,5 @@ var shell = require('gulp-shell');
 
 // Hugo task
 gulp.task('hugo', shell.task([
-  'echo hello',
-  'echo world'
+  'hugo',
 ]))
