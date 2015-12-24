@@ -7,9 +7,10 @@ var debug   = require('gulp-debug');
 var gulpif  = require('gulp-if');
 
 // Specific task modules
-// ...
+var shell = require('gulp-shell');
 
 // Hugo task
-gulp.task('hugo', function () {
-
-});
+gulp.task('hugo', shell.task([
+  'echo hello',
+  'echo world'
+]))
