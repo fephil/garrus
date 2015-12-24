@@ -1,40 +1,40 @@
 // Load global config and gulp
-var config = require(__dirname + '/../foley.json')
-var argv = require('yargs').argv
-var gulp = require('gulp')
-var plumber = require('gulp-plumber')
-var debug = require('gulp-debug')
-var gulpif = require('gulp-if')
+const config = require(__dirname + '/../foley.json')
+const argv = require('yargs').argv
+const gulp = require('gulp')
+const plumber = require('gulp-plumber')
+const debug = require('gulp-debug')
+const gulpif = require('gulp-if')
 
 // Specific task modules
-var browserSync = require('browser-sync')
-var sourcemaps = require('gulp-sourcemaps')
-var sass = require('gulp-sass')
-var postcss = require('gulp-postcss')
-var Eyeglass = require('eyeglass').Eyeglass
+const browserSync = require('browser-sync')
+const sourcemaps = require('gulp-sourcemaps')
+const sass = require('gulp-sass')
+const postcss = require('gulp-postcss')
+const Eyeglass = require('eyeglass').Eyeglass
 
-var sassOptions = {} // put whatever eyeglass and node-sass options you need here.
-var eyeglass = new Eyeglass(sassOptions)
+const sassOptions = {} // put whatever eyeglass and node-sass options you need here.
+const eyeglass = new Eyeglass(sassOptions)
 
 // Postcss workflow modules
-var scss = require('postcss-scss')
-var reporter = require('postcss-reporter')
-var stylelint = require('stylelint')
+const scss = require('postcss-scss')
+const reporter = require('postcss-reporter')
+const stylelint = require('stylelint')
 
 // Postcss output modules
-var autoprefixer = require('autoprefixer')
-var pxtorem = require('postcss-pxtorem')
-var mqpacker = require('css-mqpacker')
-var cssnano = require('cssnano')
+const autoprefixer = require('autoprefixer')
+const pxtorem = require('postcss-pxtorem')
+const mqpacker = require('css-mqpacker')
+const cssnano = require('cssnano')
 
 // Workflow specific plugins
-var workflow = [
+const workflow = [
   stylelint({ extends: [ './tasks/config/.stylelint.json' ] }),
   reporter({ clearMessages: true })
 ]
 
 // Output specific plugins
-var output = [
+const output = [
   autoprefixer({ browsers: config.autoprefixer.browsers }),
   pxtorem({ replace: true }),
   mqpacker()

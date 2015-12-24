@@ -1,15 +1,15 @@
 // Load global config and gulp
-var config = require(__dirname + '/../foley.json')
-var argv = require('yargs').argv
-var gulp = require('gulp')
-var plumber = require('gulp-plumber')
-var debug = require('gulp-debug')
-var gulpif = require('gulp-if')
+const config = require(__dirname + '/../foley.json')
+const argv = require('yargs').argv
+const gulp = require('gulp')
+const plumber = require('gulp-plumber')
+const debug = require('gulp-debug')
+const gulpif = require('gulp-if')
 
 // Specific task modules
-var browserSync = require('browser-sync')
-var imagemin = require('gulp-imagemin')
-var pngquant = require('imagemin-pngquant')
+const browserSync = require('browser-sync')
+const imagemin = require('gulp-imagemin')
+const pngquant = require('imagemin-pngquant')
 
 gulp.task('img', function () {
   return gulp.src(config.paths.img + '{,**/}*.{png,jpg,gif,svg}')

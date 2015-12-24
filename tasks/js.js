@@ -1,16 +1,16 @@
 // Load global config and gulp
-var config = require(__dirname + '/../foley.json')
-var argv = require('yargs').argv
-var gulp = require('gulp')
-var plumber = require('gulp-plumber')
-var debug = require('gulp-debug')
-var gulpif = require('gulp-if')
+const config = require(__dirname + '/../foley.json')
+const argv = require('yargs').argv
+const gulp = require('gulp')
+const plumber = require('gulp-plumber')
+const debug = require('gulp-debug')
+const gulpif = require('gulp-if')
 
 // Specific task modules
-var gutil = require('gulp-util')
-var webpack = require('webpack')
-var webpackConfig = require(__dirname + '/../webpack.config.js')
-var standard = require('gulp-standard')
+const gutil = require('gulp-util')
+const webpack = require('webpack')
+const webpackConfig = require(__dirname + '/../webpack.config.js')
+const standard = require('gulp-standard')
 
 // Linting task
 gulp.task('jslint', function () {

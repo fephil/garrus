@@ -1,21 +1,21 @@
 // Load global config and gulp
-var config = require(__dirname + '/../foley.json')
-var argv = require('yargs').argv
-var gulp = require('gulp')
-var plumber = require('gulp-plumber')
-var debug = require('gulp-debug')
-var gulpif = require('gulp-if')
+const config = require(__dirname + '/../foley.json')
+const argv = require('yargs').argv
+const gulp = require('gulp')
+const plumber = require('gulp-plumber')
+const debug = require('gulp-debug')
+const gulpif = require('gulp-if')
 
 // Specific task modules
-var glob = require('glob')
-var gulpicon = require('gulpicon/tasks/gulpicon')
-var svgConfig = require(__dirname + '/icons/config.js')
+const glob = require('glob')
+const gulpicon = require('gulpicon/tasks/gulpicon')
+const svgConfig = require(__dirname + '/icons/config.js')
 
 // Output folder
 svgConfig.dest = config.paths.svgicon
 
 // Get SVG icons
-var svgFiles = glob.sync(config.paths.icons + '**/*.svg')
+const svgFiles = glob.sync(config.paths.icons + '**/*.svg')
 
 // Icon task
 gulp.task('svgicon', gulpicon(svgFiles, svgConfig))
