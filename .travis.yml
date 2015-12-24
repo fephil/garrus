@@ -1,8 +1,11 @@
 git:
   depth: 1
-language: node_js
-node_js:
-  - '4.2'
-  - 'stable'  
-before_script:
+language: go
+go:
+  - 1.5.1
+install:
+  - . $HOME/.nvm/nvm.sh
+  - nvm install stable
+  - nvm use stable
+  - npm install
   - npm install gulp -g
