@@ -40,7 +40,6 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-standard": "^5.2.2",
     "gulp-util": "^3.0.7",
-    "gulp-watch": "^4.3.5",
     "gulpicon": "^0.1.2",
     "imagemin-pngquant": "^4.2.0",
     "path": "^0.12.7",

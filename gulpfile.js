@@ -8,12 +8,11 @@ const gulpif = require('gulp-if')
 
 // Load modules to run tasks from files
 const requireDir = require('require-dir')
-const tasks = requireDir(__dirname + '/tasks')
+const tasks = requireDir(__dirname + '/tasks') // eslint-disable-line
 const runSequence = require('run-sequence')
 
 // Specific task modules
 const browserSync = require('browser-sync')
-const watch = require('gulp-watch')
 
 // BrowserSync reload task
 gulp.task('reload', function (callback) {
