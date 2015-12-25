@@ -79,6 +79,7 @@ gulp.task('watch', function (callback) {
   gulp.watch(config.paths.js + '**/*.js', ['rebuildjs'])
   gulp.watch(config.paths.img + '{,**/}*.{png,jpg,gif,svg}', ['img'])
   gulp.watch(config.paths.icons + '**/*.svg', ['svgicon'])
+  gulp.watch(config.paths.fonts + '**/*', ['copy'])
   gulp.watch([config.paths.pages + '**/*.hbs', config.paths.partials + '**/*.hbs'], ['assets'])
 })
 
