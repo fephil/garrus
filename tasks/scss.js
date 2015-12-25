@@ -29,7 +29,7 @@ const cssnano = require('cssnano')
 
 // Workflow specific plugins
 const workflow = [
-  stylelint({ extends: [ './tasks/config/.stylelint.json' ] }),
+  stylelint({}),
   reporter({ clearMessages: true })
 ]
 
