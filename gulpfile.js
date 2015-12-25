@@ -17,7 +17,7 @@ const browserSync = require('browser-sync')
 // Public facing tasks
 // ---
 
-// Build website with development assets and run server with live reloading
+// Build website, either with development or minified assets and run server with live reloading
 gulp.task('default', function (callback) {
   runSequence(
     'clean',
@@ -87,8 +87,8 @@ gulp.task('watch', function (callback) {
 // Assets task
 gulp.task('assets', function (callback) {
   runSequence(
-    ['hugo', 'html'],
-    ['svgicon', 'scss', 'webpack', 'img', 'copy'],
+    'hugo',
+    ['html', 'svgicon', 'scss', 'webpack', 'img', 'copy'],
     callback
   )
 })
