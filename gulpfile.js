@@ -14,40 +14,8 @@ const runSequence = require('run-sequence')
 // Specific task modules
 const browserSync = require('browser-sync')
 
-// BrowserSync reload task
-gulp.task('reload', function (callback) {
-  browserSync.reload()
-  callback()
-})
-
-// Assets task
-gulp.task('assets', function (callback) {
-  runSequence(
-    ['hugo', 'html'],
-    ['svgicon', 'scss', 'webpack', 'img', 'copy'],
-    'reload',
-    callback
-  )
-})
-
-// Rebuild JS task.
-// We need to manually reload BrowserSync after
-gulp.task('rebuildjs', function (callback) {
-  runSequence(
-    'webpack',
-    'reload',
-    callback
-  )
-})
-
-// Watch task
-gulp.task('watch', function (callback) {
-  gulp.watch(config.paths.scss + '**/*.scss', ['scss'])
-  gulp.watch(config.paths.js + '**/*.js', ['rebuildjs'])
-  gulp.watch(config.paths.img + '{,**/}*.{png,jpg,gif,svg}', ['img'])
-  gulp.watch(config.paths.icons + '**/*.svg', ['svgicon'])
-  gulp.watch([config.paths.pages + '**/*.hbs', config.paths.partials + '**/*.hbs'], ['assets'])
-})
+// Public facing tasks
+// ---
 
 // Build website with development assets and run server with live reloading
 gulp.task('default', function (callback) {
@@ -81,18 +49,60 @@ gulp.task('auditcode', function (callback) {
 
 // Run the audit task to check the built website for accessibility
 // NOTE: Not used yet
+/*
 gulp.task('auditsite', function (callback) {
   runSequence(
     'deploy',
     callback
   )
 })
+*/
 
 // Run the audit task to check performance using ...
 // NOTE: Not used yet
+/*
 gulp.task('auditperf', function (callback) {
   runSequence(
     'deploy',
+    callback
+  )
+})
+*/
+
+// Non-Public facing tasks
+// ---
+
+// Watch task
+gulp.task('watch', function (callback) {
+  gulp.watch(config.paths.scss + '**/*.scss', ['scss'])
+  gulp.watch(config.paths.js + '**/*.js', ['rebuildjs'])
+  gulp.watch(config.paths.img + '{,**/}*.{png,jpg,gif,svg}', ['img'])
+  gulp.watch(config.paths.icons + '**/*.svg', ['svgicon'])
+  gulp.watch([config.paths.pages + '**/*.hbs', config.paths.partials + '**/*.hbs'], ['assets'])
+})
+
+// BrowserSync reload task
+gulp.task('reload', function (callback) {
+  browserSync.reload()
+  callback()
+})
+
+// Assets task
+gulp.task('assets', function (callback) {
+  runSequence(
+    ['hugo', 'html'],
+    ['svgicon', 'scss', 'webpack', 'img', 'copy'],
+    'reload',
+    callback
+  )
+})
+
+// Rebuild JS task.
+// We need to manually reload BrowserSync after
+gulp.task('rebuildjs', function (callback) {
+  runSequence(
+    'webpack',
+    'reload',
     callback
   )
 })
