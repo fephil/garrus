@@ -11,7 +11,7 @@ const gulpif = require('gulp-if')
 
 // Copy task
 gulp.task('copy', function () {
-  return gulp.src(config.paths.files + '**/*', {})
+  return gulp.src(config.paths.fonts + '**/*', {})
   .pipe(gulpif(argv.debug === true, debug({title: 'Files Copied:'})))
-  .pipe(gulp.dest(config.paths.build))
+  .pipe(gulp.dest(config.paths.buildAssets + 'fonts'))
 })
