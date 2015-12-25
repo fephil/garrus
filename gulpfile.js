@@ -14,14 +14,12 @@ const runSequence = require('run-sequence')
 // Specific task modules
 const browserSync = require('browser-sync')
 
-// Public facing tasks
-// ---
-
 // Build website, either with development or minified assets and run server with live reloading
 gulp.task('default', function (callback) {
   runSequence(
     'clean',
-    'assets',
+    'hugo',
+    ['html', 'svgicon', 'scss', 'webpack', 'img', 'copy'],
     'browsersync',
     'watch',
     callback
@@ -32,7 +30,8 @@ gulp.task('default', function (callback) {
 gulp.task('deploy', function (callback) {
   runSequence(
     'clean',
-    'assets',
+    'hugo',
+    ['html', 'svgicon', 'scss', 'webpack', 'img', 'copy'],
     'crticalcss',
     callback
   )
@@ -70,9 +69,6 @@ gulp.task('auditperf', function (callback) {
 })
 */
 
-// Non-Public facing tasks
-// ---
-
 // Watch task
 gulp.task('watch', function (callback) {
   gulp.watch(config.paths.scss + '**/*.scss', ['scss'])
@@ -82,13 +78,4 @@ gulp.task('watch', function (callback) {
   gulp.watch(config.paths.fonts + '**/*', ['copy'])
   gulp.watch(['config.yaml', config.paths.archetypes + '**/*', config.paths.content + '**/*', config.paths.data + '**/*', config.paths.templates + '**/*'], ['hugo'])
   gulp.watch([config.paths.build + '**/*.html', config.paths.build + '**/*.js']).on('change', browserSync.reload)
-})
-
-// Assets task
-gulp.task('assets', function (callback) {
-  runSequence(
-    'hugo',
-    ['html', 'svgicon', 'scss', 'webpack', 'img', 'copy'],
-    callback
-  )
 })
