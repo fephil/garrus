@@ -1,21 +1,11 @@
-<!doctype html>
-<html class="no-js" lang="en-GB">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>hardcode title</title>
-    <meta name="description" content="hardcode description" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
 
-    <link rel="stylesheet" href="assets/css/site.css" />
-  </head>
-  <body>
-    {{ partial "header.html" . }}
+  {{ range .Data.Pages }}
+    {{ if eq .Type "404" }}
+      {{ .Content }}
+    {{ end }}
+  {{ end }}
 
-    <p>Hardcode 404 test</p>
-
-    {{ partial "footer.html" . }}
-
-    <script src="assets/js/bundle.js"></script>
-  </body>
-</html>
+{{ partial "footer.html" . }}
+{{ partial "foot.html" . }}
