@@ -1,19 +1,19 @@
 // Load global config and gulp
-var config = require(__dirname + '/foley.json')
-var argv = require('yargs').argv
-var gulp = require('gulp')
-var plumber = require('gulp-plumber')
-var debug = require('gulp-debug')
-var gulpif = require('gulp-if')
+const config = require(__dirname + '/foley.json')
+const argv = require('yargs').argv
+const gulp = require('gulp')
+const plumber = require('gulp-plumber')
+const debug = require('gulp-debug')
+const gulpif = require('gulp-if')
 
 // Load modules to run tasks from files
-var requireDir = require('require-dir')
-var tasks = requireDir(__dirname + '/tasks')
-var runSequence = require('run-sequence')
+const requireDir = require('require-dir')
+const tasks = requireDir(__dirname + '/tasks')
+const runSequence = require('run-sequence')
 
 // Specific task modules
-var browserSync = require('browser-sync')
-var watch = require('gulp-watch')
+const browserSync = require('browser-sync')
+const watch = require('gulp-watch')
 
 // BrowserSync reload task
 gulp.task('reload', function (callback) {
