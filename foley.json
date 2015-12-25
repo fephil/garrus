@@ -2,13 +2,17 @@
   "paths": {
     "build": "_dist/",
     "buildAssets": "_dist/assets/",
+    "svgicon": "_svgicon",
     "scss": "src/scss/",
     "files": "src/files/",
     "fonts": "src/fonts/",
     "icons": "src/icons/",
     "img": "src/img/",
     "js": "src/js/",
-    "svgicon": "_svgicon" 
+    "archetypes": "src/archetypes/",
+    "content": "src/content/",
+    "data": "src/data/",
+    "templates": "src/templates/"
   },
   "autoprefixer": {
     "browsers": ["last 2 versions", "IE >= 10"]

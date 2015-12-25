@@ -76,17 +76,12 @@ gulp.task('auditperf', function (callback) {
 // Watch task
 gulp.task('watch', function (callback) {
   gulp.watch(config.paths.scss + '**/*.scss', ['scss'])
-  gulp.watch(config.paths.js + '**/*.js', ['rebuildjs'])
+  gulp.watch(config.paths.js + '**/*.js', ['webpack'])
   gulp.watch(config.paths.img + '{,**/}*.{png,jpg,gif,svg}', ['img'])
   gulp.watch(config.paths.icons + '**/*.svg', ['svgicon'])
   gulp.watch(config.paths.fonts + '**/*', ['copy'])
-  gulp.watch([config.paths.pages + '**/*.hbs', config.paths.partials + '**/*.hbs'], ['assets'])
-})
-
-// BrowserSync reload task
-gulp.task('reload', function (callback) {
-  browserSync.reload()
-  callback()
+  gulp.watch(['config.yaml', config.paths.archetypes + '**/*', config.paths.content + '**/*', config.paths.data + '**/*', config.paths.templates + '**/*'], ['hugo'])
+  gulp.watch([config.paths.build + '**/*.html', config.paths.build + '**/*.js']).on('change', browserSync.reload)
 })
 
 // Assets task
@@ -94,17 +89,6 @@ gulp.task('assets', function (callback) {
   runSequence(
     ['hugo', 'html'],
     ['svgicon', 'scss', 'webpack', 'img', 'copy'],
-    'reload',
-    callback
-  )
-})
-
-// Rebuild JS task.
-// We need to manually reload BrowserSync after
-gulp.task('rebuildjs', function (callback) {
-  runSequence(
-    'webpack',
-    'reload',
     callback
   )
 })
