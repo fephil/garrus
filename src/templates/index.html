@@ -1,11 +1,22 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-  {{ range .Data.Pages }}
-    {{ if eq .Type "index" }}
-      {{ .Content }}
+<div class="container grid-test">
+  <div class="grid-test__sidebar">
+    <h1 class="h2">Sidebar</h1>
+    {{ range where .Data.Pages "Section" "posts" }}
+      {{ .Render "summary" }}
     {{ end }}
-  {{ end }}
+  </div>
+
+  <div class="grid-test__copy">
+    {{ range .Data.Pages }}
+      {{ if eq .Type "index" }}
+        {{ .Content }}
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
 
 {{ partial "footer.html" . }}
 {{ partial "foot.html" . }}

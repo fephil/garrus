@@ -1,3 +1,25 @@
+{{ partial "head.html" . }}
 {{ partial "header.html" . }}
   {{ .Content }}
+
+  <div class="metadata">
+    <ul>
+      <li>{{ .WordCount }} words in this article</li>
+      <li><h2>Categories:</h2>
+        <ul>
+          {{ range .Params.categories }}
+            <li><a href="/categories/{{ . | urlize }}">{{ . }}</a></li>
+          {{ end }}
+        </ul>
+      </li>
+      <li><h2>Tags:</h2>
+        <ul>
+          {{ range .Params.tags }}
+            <li><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
+          {{ end }}
+        </ul>
+      </li>
+    </ul>
+  </div>
 {{ partial "footer.html" . }}
+{{ partial "foot.html" . }}
