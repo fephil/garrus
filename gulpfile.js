@@ -14,6 +14,17 @@ const runSequence = require('run-sequence')
 // Specific task modules
 const browserSync = require('browser-sync')
 
+// Watch task
+gulp.task('watch', function (callback) {
+  gulp.watch(config.paths.scss + '**/*.scss', ['scss'])
+  gulp.watch(config.paths.js + '**/*.js', ['webpack'])
+  gulp.watch(config.paths.img + '{,**/}*.{png,jpg,gif,svg}', ['img'])
+  gulp.watch(config.paths.icons + '**/*.svg', ['svgicon'])
+  gulp.watch(config.paths.fonts + '**/*', ['copy'])
+  gulp.watch(['config.yaml', config.paths.archetypes + '**/*', config.paths.content + '**/*', config.paths.data + '**/*', config.paths.templates + '**/*'], ['hugo'])
+  gulp.watch([config.paths.build + '**/*.html', config.paths.build + '**/*.js']).on('change', browserSync.reload)
+})
+
 // Build website, either with development or minified assets and run server with live reloading
 gulp.task('default', function (callback) {
   runSequence(
@@ -68,14 +79,3 @@ gulp.task('auditperf', function (callback) {
   )
 })
 */
-
-// Watch task
-gulp.task('watch', function (callback) {
-  gulp.watch(config.paths.scss + '**/*.scss', ['scss'])
-  gulp.watch(config.paths.js + '**/*.js', ['webpack'])
-  gulp.watch(config.paths.img + '{,**/}*.{png,jpg,gif,svg}', ['img'])
-  gulp.watch(config.paths.icons + '**/*.svg', ['svgicon'])
-  gulp.watch(config.paths.fonts + '**/*', ['copy'])
-  gulp.watch(['config.yaml', config.paths.archetypes + '**/*', config.paths.content + '**/*', config.paths.data + '**/*', config.paths.templates + '**/*'], ['hugo'])
-  gulp.watch([config.paths.build + '**/*.html', config.paths.build + '**/*.js']).on('change', browserSync.reload)
-})
