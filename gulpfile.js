@@ -43,6 +43,7 @@ gulp.task('auditcode', function (callback) {
   runSequence(
     'scsslint',
     'jslint',
+    'hugocheck',
     callback
   )
 })

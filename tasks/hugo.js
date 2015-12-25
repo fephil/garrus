@@ -9,7 +9,12 @@ const gulpif = require('gulp-if')
 // Specific task modules
 const shell = require('gulp-shell')
 
-// Hugo task
+// Build Hugo task
 gulp.task('hugo', shell.task([
   'hugo'
+]))
+
+// Check content task
+gulp.task('hugocheck', shell.task([
+  'hugo check'
 ]))
