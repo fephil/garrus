@@ -1,6 +1,6 @@
 # Build directories
 publishdir: _dist
-archetypedir: src/archetype
+archetypedir: src/archetypes
 layoutdir: src/templates
 contentdir: src/content
 dataDir: src/data
@@ -13,6 +13,7 @@ relativeURLs: true
 canonifyURLs: false
 permalinks:
   posts: blog/:title/
+MetaDataFormat: yaml
 
 # Site metadata
 baseURL: ""
