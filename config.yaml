@@ -7,11 +7,14 @@ dataDir: src/data
 staticdir: src/files
 
 # Hugo settings
-canonifyurls: true
+buildDrafts: false
+buildFuture: false
+relativeURLs: true
+canonifyURLs: false
 permalinks:
   posts: blog/:title/
 
 # Site metadata
-baseurl: http://testurl.dev
+baseURL: ""
 languageCode: en-gb
 title: Foley
