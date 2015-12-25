@@ -1,12 +1,17 @@
 # Build directories
 publishdir: _dist
-archetypedir: "src/archetype"
-layoutdir: "src/templates"
-contentdir: "src/content"
-dataDir: "src/data"
-staticdir: "src/files"
+archetypedir: src/archetype
+layoutdir: src/templates
+contentdir: src/content
+dataDir: src/data
+staticdir: src/files
 
-# Site settings
-baseurl: "http://replace-this-with-your-hugo-site.com/"
-languageCode: "en-gb"
-title: "My New Hugo Site"
+# Hugo settings
+canonifyurls: true
+permalinks:
+  posts: blog/:title/
+
+# Site metadata
+baseurl: http://testurl.dev
+languageCode: en-gb
+title: Foley
