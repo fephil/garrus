@@ -85,11 +85,9 @@ The following plugins for Atom are recommended but not required:
 
 ## Known issues
 
-* Critical inline CSS only happens on the deploy task,
 * Gulpicon assets are not automatically copied into website,
-* Example JS files do not adhere to ES2015,
-* No proper documentation,
-* No proper example code.
+* No full documentation yet - [#35](https://github.com/PJL101/foley/issues/35),
+* No fully featured example website yet - [#44](https://github.com/PJL101/foley/issues/44).
 
 ## Credit
 
