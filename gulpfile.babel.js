@@ -1,21 +1,19 @@
+'use strict'
+
 // Load global config and gulp
-const config = require(__dirname + '/foley.json')
-const argv = require('yargs').argv
-const gulp = require('gulp')
-const plumber = require('gulp-plumber')
-const debug = require('gulp-debug')
-const gulpif = require('gulp-if')
+import config from './foley.json'
+import gulp from 'gulp'
 
 // Load modules to run tasks from files
-const requireDir = require('require-dir')
+import requireDir from 'require-dir'
+import runSequence from 'run-sequence'
 const tasks = requireDir(__dirname + '/tasks') // eslint-disable-line
-const runSequence = require('run-sequence')
 
 // Specific task modules
-const browserSync = require('browser-sync')
+import browserSync from 'browser-sync'
 
 // Watch task
-gulp.task('watch', function (callback) {
+gulp.task('watch', () => {
   gulp.watch(config.paths.scss + '**/*.scss', ['scss'])
   gulp.watch(config.paths.js + '**/*.js', ['webpack'])
   gulp.watch(config.paths.img + '{,**/}*.{png,jpg,gif,svg}', ['img'])
@@ -26,19 +24,18 @@ gulp.task('watch', function (callback) {
 })
 
 // Build website, either with development or minified assets and run server with live reloading
-gulp.task('default', function (callback) {
+gulp.task('default', callback => {
   runSequence(
     'clean',
     'hugo',
     ['html', 'svgicon', 'scss', 'webpack', 'img', 'copy'],
-    'browsersync',
-    'watch',
+    ['browsersync', 'watch'],
     callback
   )
 })
 
 // Build website, either with development or minified assets depending on flag
-gulp.task('deploy', function (callback) {
+gulp.task('deploy', callback => {
   runSequence(
     'clean',
     'hugo',
@@ -49,7 +46,7 @@ gulp.task('deploy', function (callback) {
 })
 
 // Run the audit task to check the code
-gulp.task('auditcode', function (callback) {
+gulp.task('auditcode', callback => {
   runSequence(
     'scsslint',
     'jslint',
@@ -61,7 +58,7 @@ gulp.task('auditcode', function (callback) {
 // Run the audit task to check the built website for accessibility
 // NOTE: Not used yet
 /*
-gulp.task('auditsite', function (callback) {
+gulp.task('auditsite', callback => {
   runSequence(
     'deploy',
     callback
@@ -72,7 +69,7 @@ gulp.task('auditsite', function (callback) {
 // Run the audit task to check performance using ...
 // NOTE: Not used yet
 /*
-gulp.task('auditperf', function (callback) {
+gulp.task('auditperf', callback => {
   runSequence(
     'deploy',
     callback
