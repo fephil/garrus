@@ -1,16 +1,12 @@
 // Load global config and gulp
-const config = require(__dirname + '/../foley.json')
-const argv = require('yargs').argv
-const gulp = require('gulp')
-const plumber = require('gulp-plumber')
-const debug = require('gulp-debug')
-const gulpif = require('gulp-if')
+import config from '../foley.json'
+import gulp from 'gulp'
 
 // Specific task modules
-const browserSync = require('browser-sync')
+import browserSync from 'browser-sync'
 
 // Browsersync task
-gulp.task('browsersync', function () {
+gulp.task('browsersync', () => {
   browserSync.init({
     notify: false,
     server: {

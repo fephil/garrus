@@ -1,24 +1,24 @@
 // Load global config and gulp
-const config = require(__dirname + '/../foley.json')
-const argv = require('yargs').argv
-const gulp = require('gulp')
-const plumber = require('gulp-plumber')
-const debug = require('gulp-debug')
-const gulpif = require('gulp-if')
+import config from '../foley.json'
+import gulp from 'gulp'
 
 // Specific task modules
-const browserSync = require('browser-sync')
-const imagemin = require('gulp-imagemin')
-const pngquant = require('imagemin-pngquant')
+import argv from 'yargs'
+import debug from 'gulp-debug'
+import gulpif from 'gulp-if'
+import browserSync from 'browser-sync'
+import imagemin from 'gulp-imagemin'
+import pngquant from 'imagemin-pngquant'
 
-gulp.task('img', function () {
+// Image minification task
+gulp.task('img', () => {
   return gulp.src(config.paths.img + '{,**/}*.{png,jpg,gif,svg}')
-    .pipe(gulpif(argv.debug === true, debug({title: 'Images Optimised:'})))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [pngquant()]
-    }))
-    .pipe(gulp.dest(config.paths.buildAssets + 'img'))
-    .pipe(browserSync.stream())
+  .pipe(gulpif(argv.debug === true, debug({title: 'Images Optimised:'})))
+  .pipe(imagemin({
+    progressive: true,
+    svgoPlugins: [{removeViewBox: false}],
+    use: [pngquant()]
+  }))
+  .pipe(gulp.dest(config.paths.buildAssets + 'img'))
+  .pipe(browserSync.stream())
 })

@@ -1,16 +1,12 @@
 // Load global config and gulp
-const config = require(__dirname + '/../foley.json')
-const argv = require('yargs').argv
-const gulp = require('gulp')
-const plumber = require('gulp-plumber')
-const debug = require('gulp-debug')
-const gulpif = require('gulp-if')
+import config from '../foley.json'
+import gulp from 'gulp'
 
 // Specific task modules
-const del = require('del')
+import del from 'del'
 
 // Clean task
-gulp.task('clean', function () {
+gulp.task('clean', () => {
   return del([
     config.paths.build,
     config.paths.svgicon

@@ -1,16 +1,14 @@
 // Load global config and gulp
-const config = require(__dirname + '/../foley.json')
-const argv = require('yargs').argv
-const gulp = require('gulp')
-const plumber = require('gulp-plumber')
-const debug = require('gulp-debug')
-const gulpif = require('gulp-if')
+import config from '../foley.json'
+import gulp from 'gulp'
 
 // Specific task modules
-// ...
+import argv from 'yargs'
+import debug from 'gulp-debug'
+import gulpif from 'gulp-if'
 
 // Copy task
-gulp.task('copy', function () {
+gulp.task('copy', () => {
   return gulp.src(config.paths.fonts + '**/*', {})
   .pipe(gulpif(argv.debug === true, debug({title: 'Files Copied:'})))
   .pipe(gulp.dest(config.paths.buildAssets + 'fonts'))

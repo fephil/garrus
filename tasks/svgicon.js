@@ -1,15 +1,11 @@
 // Load global config and gulp
-const config = require(__dirname + '/../foley.json')
-const argv = require('yargs').argv
-const gulp = require('gulp')
-const plumber = require('gulp-plumber')
-const debug = require('gulp-debug')
-const gulpif = require('gulp-if')
+import config from '../foley.json'
+import gulp from 'gulp'
 
 // Specific task modules
-const glob = require('glob')
-const gulpicon = require('gulpicon/tasks/gulpicon')
-const svgConfig = require(__dirname + '/icons/config.js')
+import glob from 'glob'
+import gulpicon from 'gulpicon/tasks/gulpicon'
+import svgConfig from './icons/config.js'
 
 // Output folder
 svgConfig.dest = config.paths.svgicon
