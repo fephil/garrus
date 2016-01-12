@@ -9,9 +9,6 @@ import requireDir from 'require-dir'
 import runSequence from 'run-sequence'
 const tasks = requireDir(__dirname + '/tasks') // eslint-disable-line
 
-// Specific task modules
-import browserSync from 'browser-sync'
-
 // Watch task
 gulp.task('watch', () => {
   gulp.watch(config.paths.scss + '**/*.scss', ['scss'])
@@ -20,7 +17,6 @@ gulp.task('watch', () => {
   gulp.watch(config.paths.icons + '**/*.svg', ['svgicon'])
   gulp.watch(config.paths.fonts + '**/*', ['copy'])
   gulp.watch([config.paths.data + '**/*', config.paths.layouts + '**/*', config.paths.pages + '**/*', config.paths.partials + '**/*'], ['metalsmith'])
-  gulp.watch([config.paths.build + '**/*.html', config.paths.build + '**/*.js']).on('change', browserSync.reload)
 })
 
 // Build website, either with development or minified assets and run server with live reloading
@@ -50,7 +46,6 @@ gulp.task('auditcode', callback => {
   runSequence(
     'scsslint',
     'jslint',
-    'hugocheck',
     callback
   )
 })
