@@ -1,14 +1,11 @@
 git:
   depth: 1
-language: go
-go:
-  - 1.5.2
-install:
-  - go get -v github.com/spf13/hugo
-  - . $HOME/.nvm/nvm.sh
-  - nvm install stable
-  - nvm use stable
-  - npm install
+language: node_js
+node_js:
+  - '4.2'
+  - 'stable'
+cache:
+  directories:
+    - node_modules
+before_script:
   - npm install gulp -g
-script:
-  - gulp deploy --debug
