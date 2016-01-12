@@ -7,4 +7,4 @@ layout: post.hbs
 draft: true
 ---
 
-# Draft post test 1
+# Draft post test. This page should not be built.
