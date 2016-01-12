@@ -7,4 +7,4 @@ layout: post.hbs
 draft: false
 ---
 
-# test test
+# A blog test Post

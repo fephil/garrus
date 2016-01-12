@@ -7,8 +7,12 @@ permalink: false
 
 <div class="container grid-test">
   <div class="grid-test__sidebar">
-    <h1 class="h2">Sidebar</h1>
-    <p>Sidebar content</p>
+    <h1 class="h2">Example data from blog</h1>
+    <ul>
+      {{#each collections.blog}}
+        <li><h3 class="h3"><a href="{{this.path}}">{{this.title}}</a></h3></li>
+      {{/each}}
+    </ul>
   </div>
 
    <div class="grid-test__main">

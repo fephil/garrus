@@ -19,23 +19,27 @@
   },
   "metalsmith": {
     "plugins": {
-      "metalsmith-drafts": true,     
+      "metalsmith-drafts": true,
+      "metalsmith-markdownit": {
+         "typographer": true,
+         "html": true
+       },
+       "metalsmith-permalinks": {
+         "pattern": "blog/:title"
+       },
       "metalsmith-collections": {
         "posts": {
           "pattern": "blog/!(index).hbs"
         }
       },
-      "metalsmith-markdownit": {
-         "typographer": true,
-         "html": true
-       },
       "metalsmith-layouts": {
         "engine": "handlebars",
         "directory": "./src/layouts",
         "partials": "./src/partials"
       },
-      "metalsmith-permalinks": {
-        "pattern": "blog/:title"
+      "metalsmith-in-place": {
+        "engine": "handlebars",
+        "partials": "./src/partials"
       }
     }
   }
