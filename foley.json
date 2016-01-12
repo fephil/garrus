@@ -29,7 +29,7 @@
        },
       "metalsmith-collections": {
         "posts": {
-          "pattern": "blog/!(index).hbs"
+          "pattern": "blog/!(index).md"
         }
       },
       "metalsmith-layouts": {
@@ -39,6 +39,7 @@
       },
       "metalsmith-in-place": {
         "engine": "handlebars",
+        "pattern": "*.hbs",
         "partials": "./src/partials"
       }
     }
