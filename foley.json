@@ -9,12 +9,39 @@
     "icons": "src/icons/",
     "img": "src/img/",
     "js": "src/js/",
-    "archetypes": "src/archetypes/",
-    "content": "src/content/",
     "data": "src/data/",
-    "templates": "src/templates/"
+    "layouts": "src/layouts",
+    "pages": "src/pages",
+    "partials": "src/partials"
   },
   "autoprefixer": {
     "browsers": ["last 2 versions", "IE >= 10"]
+  },
+  "metalsmith": {
+    "plugins": {
+      "metalsmith-drafts": true,
+      "metalsmith-markdownit": {
+         "typographer": true,
+         "html": true
+       },
+       "metalsmith-permalinks": {
+         "pattern": "blog/:title"
+       },
+      "metalsmith-collections": {
+        "posts": {
+          "pattern": "blog/!(index).md"
+        }
+      },
+      "metalsmith-layouts": {
+        "engine": "handlebars",
+        "directory": "./src/layouts",
+        "partials": "./src/partials"
+      },
+      "metalsmith-in-place": {
+        "engine": "handlebars",
+        "pattern": "*.hbs",
+        "partials": "./src/partials"
+      }
+    }
   }
 }

@@ -19,7 +19,7 @@ gulp.task('watch', () => {
   gulp.watch(config.paths.img + '{,**/}*.{png,jpg,gif,svg}', ['img'])
   gulp.watch(config.paths.icons + '**/*.svg', ['svgicon'])
   gulp.watch(config.paths.fonts + '**/*', ['copy'])
-  gulp.watch(['config.yaml', config.paths.archetypes + '**/*', config.paths.content + '**/*', config.paths.data + '**/*', config.paths.templates + '**/*'], ['hugo'])
+  gulp.watch([config.paths.data + '**/*', config.paths.layouts + '**/*', config.paths.pages + '**/*', config.paths.partials + '**/*'], ['metalsmith'])
   gulp.watch([config.paths.build + '**/*.html', config.paths.build + '**/*.js']).on('change', browserSync.reload)
 })
 
@@ -27,7 +27,7 @@ gulp.task('watch', () => {
 gulp.task('default', callback => {
   runSequence(
     'clean',
-    'hugo',
+    'metalsmith',
     ['html', 'svgicon', 'scss', 'webpack', 'img', 'copy'],
     ['browsersync', 'watch'],
     callback
@@ -38,7 +38,7 @@ gulp.task('default', callback => {
 gulp.task('deploy', callback => {
   runSequence(
     'clean',
-    'hugo',
+    'metalsmith',
     ['html', 'svgicon', 'scss', 'webpack', 'img', 'copy'],
     'crticalcss',
     callback

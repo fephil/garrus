@@ -7,7 +7,7 @@
 
 **A modern, opinionated frontend workflow for building a static website and blog.**
 
-Version: 0.1.0
+Version: 0.2.0
 
 * Author: [Phil Lennon](http://iampjl.co.uk)
 * Source: [github.com/PJL101/foley](http://github.com/PJL101/foley)
@@ -17,7 +17,7 @@ Version: 0.1.0
 
 -
 
-**Note:** This is in heavy development and is not ready for production use quite yet.
+**Note:** This project is in heavy development and things will change.
 
 ## About
 
@@ -26,7 +26,7 @@ Foley is an 'all-in-one' workflow designed to quickly build an optimised website
 This workflow contains:
 
 * Gulp,
-* Hugo (Super fantastic static website and blog generator),
+* Metalsmith (with Handlebars templating, Blog & Markdown support)
 * Webpack with jQuery integration,
 * Babel with ES2015 support,
 * Standardjs linting,
@@ -45,8 +45,6 @@ Comments, suggestions & pull requests are always welcome. See the [issues list](
 
 Download the latest stable release from [GitHub](https://github.com/PJL101/foley/releases). Once this has been done:
 
-* Install and setup Go 1.5,
-* Install Hugo 0.15,
 * Install Node 4 LTS or 5 stable (preferred),
 * run `npm i gulp -g`,
 * Navigate to the workflow folder in command line terminal,
@@ -60,6 +58,7 @@ The following plugins for Atom are recommended but not required:
 
 * editorconfig,
 * linter,
+* linter-handlebars,
 * linter-js-standard,
 * linter-stylelint,
 * tabs-to-spaces.
