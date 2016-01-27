@@ -45,6 +45,7 @@ Comments, suggestions & pull requests are always welcome. See the [issues list](
 
 Download the latest stable release from [GitHub](https://github.com/PJL101/foley/releases). Once this has been done:
 
+* Optional: Install PhantomJS,
 * Install Node 4 LTS or 5 stable (preferred),
 * run `npm i gulp -g`,
 * Navigate to the workflow folder in command line terminal,
