@@ -1,4 +1,4 @@
-# foley v0.2.1
+# foley v0.2.2
 
 [![Build Status](https://travis-ci.org/PJL101/foley.svg?branch=master)](https://travis-ci.org/PJL101/foley)
 [![devDependency Status](https://david-dm.org/PJL101/foley/dev-status.svg)](https://david-dm.org/PJL101/foley#info=devDependencies)
