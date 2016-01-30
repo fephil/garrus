@@ -32,6 +32,10 @@
           "pattern": "blog/!(index).md"
         }
       },
+      "metalsmith-discover-helpers": {
+        "directory": "./src/helpers",
+        "pattern": "/\\.js$/"
+      },
       "metalsmith-layouts": {
         "engine": "handlebars",
         "directory": "./src/layouts",
