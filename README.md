@@ -43,7 +43,7 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/foley
 
 * Optional: Install PhantomJS, using Homebrew or similar package manager,
 * Install Node 4 LTS or 5 stable (preferred),
-* Run in Terminal: `npm i gulp-cli -g`,
+* Run in Terminal: `npm i gulp-cli -g` (Gulp does not need to be installed globally),
 * Navigate to the workflow folder in command line Terminal,
 * Run: `npm i`.
 
