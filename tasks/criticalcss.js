@@ -3,7 +3,7 @@ import config from '../foley.json'
 import gulp from 'gulp'
 
 // Specific task modules
-import argv from 'yargs'
+import { argv as argv } from 'yargs'
 import debug from 'gulp-debug'
 import gulpif from 'gulp-if'
 import critical from 'critical'
