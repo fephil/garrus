@@ -1,8 +1,7 @@
 // Non outputted Sass
-@import "modules/functions";
-@import "modules/variables";
-@import "modules/mixins";
-
+@import 'modules/functions';
+@import 'modules/variables';
+@import 'modules/mixins';
 
 // Vendor files
 @import 'vendor/normalize';
@@ -10,9 +9,9 @@
 @import 'susy'; // from npm
 
 // Partials
-@import "partials/base";
-@import "partials/container";
-@import "partials/typography";
-@import "partials/header";
-@import "partials/footer";
-@import "partials/grid-test";
+@import 'partials/base';
+@import 'partials/container';
+@import 'partials/typography';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/grid-test';
