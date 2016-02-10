@@ -1,17 +1,16 @@
 # foley v0.3.0-alpha
 
-[![Build Status](https://travis-ci.org/PJL101/foley.svg?branch=master)](https://travis-ci.org/PJL101/foley)
-[![devDependency Status](https://david-dm.org/PJL101/foley/dev-status.svg)](https://david-dm.org/PJL101/foley#info=devDependencies)
-[![Dependency Status](https://david-dm.org/PJL101/foley.svg)](https://david-dm.org/PJL101/foley)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Build Status](https://travis-ci.org/fephil/foley.svg?branch=master)](https://travis-ci.org/fephil/foley)
+[![devDependency Status](https://david-dm.org/fephil/foley/dev-status.svg)](https://david-dm.org/fephil/foley#info=devDependencies)
+[![Dependency Status](https://david-dm.org/fephil/foley.svg)](https://david-dm.org/fephil/foley)
 
 **A modern, opinionated frontend workflow for building a static website and blog.**
 
-* Author: [Phil Lennon](http://iampjl.co.uk)
-* Source: [github.com/PJL101/foley](http://github.com/PJL101/foley)
-* Issues and Suggestions: [github.com/PJL101/foley/issues](http://github.com/PJL101/foley/issues)
-* Twitter: [@PJL101](http://twitter.com/pjl101)
-* Email: [enquiry@iampjl.co.uk](mailto:enquiry@iampjl.co.uk)
+* Author: [Phil Lennon](http://frontendphil.co.uk)
+* Source: [github.com/fephil/foley](http://github.com/fephil/foley)
+* Issues and Suggestions: [github.com/fephil/foley/issues](http://github.com/fephil/foley/issues)
+* Twitter: [@frontendphil](http://twitter.com/frontendphil)
+* Email: [enquiry@frontendphil.com](mailto:enquiry@frontendphil.com)
 
 ***
 
@@ -35,13 +34,12 @@ This workflow contains the following key features:
 * HTML minification,
 * Easy to use with simple Gulp tasks & configuration from global files,
 
-Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/PJL101/foley/issues) for more information about future enhancements and changes.
+Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/fephil/foley/issues) for more information about future enhancements and changes.
 
 ## Install
 
-Download the latest stable release from [GitHub](https://github.com/PJL101/foley/releases). Once this has been done:
+Download the latest stable release from [GitHub](https://github.com/fephil/foley/releases). Once this has been done:
 
-* Optional: Install PhantomJS, using Homebrew or similar package manager,
 * Install Node 4 LTS or 5 stable (preferred),
 * Run in Terminal: `npm i gulp-cli -g` (Gulp does not need to be installed globally),
 * Navigate to the workflow folder in command line Terminal,
@@ -78,13 +76,11 @@ Run these tasks in your command line Terminal:
 
 ## Known issues
 
-* Gulpicon assets are not automatically copied into website,
-* No full documentation yet - [#35](https://github.com/PJL101/foley/issues/35),
-* No fully featured example website yet - [#44](https://github.com/PJL101/foley/issues/44).
+* No full documentation yet - [#35](https://github.com/fephil/foley/issues/35),
+* No fully featured example website yet - [#44](https://github.com/fephil/foley/issues/44).
 
 ## Credit
 
 * Sample images from Unsplash.
-* Sample icons from gulpicon.
 
 **Have a nice day!**
