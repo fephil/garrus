@@ -9,7 +9,7 @@
 * Author: [Phil Lennon](http://frontendphil.co.uk)
 * Source: [github.com/fephil/foley](http://github.com/fephil/foley)
 * Issues and Suggestions: [github.com/fephil/foley/issues](http://github.com/fephil/foley/issues)
-* Download: [GitHub Releases](https://github.com/fephil/foley/releases)
+* Download: [https://github.com/fephil/foley/releases](https://github.com/fephil/foley/releases)
 * Twitter: [@frontendphil](http://twitter.com/frontendphil)
 * Email: [enquiry@frontendphil.com](mailto:enquiry@frontendphil.com)
 
