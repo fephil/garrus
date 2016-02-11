@@ -1,16 +1,16 @@
 {
   "name": "foley",
   "description": "A modern, opinionated frontend workflow for building a static website and blog",
-  "version": "0.3.0-alpha",
-  "author": "Phil Lennon <enquiry@iampjl.co.uk>",
+  "version": "0.3.0",
+  "author": "Phil Lennon <enquiry@frontendphil.com>",
   "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PJL101/foley.git"
+    "url": "https://github.com/fephil/foley.git"
   },
   "bugs": {
-    "url": "https://github.com/PJL101/foley/issues"
+    "url": "https://github.com/fephil/foley/issues"
   },
   "engines": {
     "node": ">= 4"
@@ -45,7 +45,7 @@
     "imagemin-pngquant": "4.2.0",
     "metalsmith": "2.1.0",
     "metalsmith-collections": "0.7.0",
-    "metalsmith-discover-helpers": "^0.1.0",
+    "metalsmith-discover-helpers": "0.1.0",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-in-place": "1.3.3",
     "metalsmith-layouts": "1.4.4",
@@ -70,7 +70,7 @@
     "holderjs": "2.9.1",
     "jquery": "2.2.0",
     "lodash": "4.3.0",
-    "svg4everybody": "^2.0.3"
+    "svg4everybody": "2.0.3"
   },
   "babel": {
     "presets": [
