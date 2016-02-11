@@ -1,8 +1,11 @@
 var argv = require('yargs').argv
+var path = require('path')
 var webpack = require('webpack')
+var CommonsChunkPlugin = require(__dirname + '/node_modules/webpack/lib/optimize/CommonsChunkPlugin')
 
 // Create plugins array
 var plugins = [
+  new CommonsChunkPlugin('commons.js'),
   new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery'
@@ -15,9 +18,15 @@ if (argv.production) {
 }
 
 module.exports = {
-  entry: ['./src/js/app.js'],
+  entry: {
+    home: __dirname + '/src/js/app-home',
+    blog: __dirname + '/src/js/app-blog'
+  },
   output: {
-    filename: './_dist/assets/js/bundle.js'
+    path: path.join(__dirname, '/_dist/assets/js/'),
+    filename: '[name].bundle.js',
+    chunkFilename: '[id].chunk.js',
+    publicPath: 'assets/js/'
   },
   plugins: plugins,
   module: {

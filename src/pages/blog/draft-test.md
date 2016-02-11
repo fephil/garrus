@@ -5,6 +5,7 @@ collection: blog
 date: 2015-06-01
 layout: post.hbs
 draft: true
+appName: blog
 ---
 
 # Draft post test. This page should not be built.
