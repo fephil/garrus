@@ -30,7 +30,7 @@ This workflow contains the following key features:
 * Critical inlined CSS,
 * Sass-mq & Susy grid system,
 * Image minification,
-* Gulpicon SVG support,
+* Gulp SVG sprite support,
 * HTML minification,
 * Easy to use with simple Gulp tasks & configuration from global files,
 
@@ -82,5 +82,6 @@ Run these tasks in your command line Terminal:
 ## Credit
 
 * Sample images from Unsplash.
+* Sample icons from gulpicon.
 
 **Have a nice day!**
