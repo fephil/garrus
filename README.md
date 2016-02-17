@@ -6,7 +6,7 @@
 
 **A modern, opinionated frontend workflow for building a static website and blog.**
 
-* Author: [Phil Lennon](http://frontendphil.co.uk)
+* Author: [Phil Lennon](http://frontendphil.com)
 * Source: [github.com/fephil/foley](http://github.com/fephil/foley)
 * Issues and Suggestions: [github.com/fephil/foley/issues](http://github.com/fephil/foley/issues)
 * Download: [https://github.com/fephil/foley/releases](https://github.com/fephil/foley/releases)
