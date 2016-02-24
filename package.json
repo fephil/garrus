@@ -63,7 +63,7 @@
     "stylelint-config-suitcss": "3.0.0",
     "susy": "2.2.12",
     "webpack": "1.12.13",
-    "yargs": "3.32.0"
+    "yargs": "4.2.0"
   },
   "dependencies": {
     "fastclick": "1.0.6",
