@@ -8,7 +8,6 @@ import debug from 'gulp-debug'
 import gulpif from 'gulp-if'
 import browserSync from 'browser-sync'
 import Metalsmith from 'metalsmith'
-import rename from 'metalsmith-rename'
 import htmlmin from 'gulp-htmlmin'
 
 // Build Metalsmith
@@ -27,12 +26,6 @@ function buildMetalsmith (callback) {
     // Add plugins to Metalsmith
     metalsmith.use(plugin(options))
   })
-
-  // Rename file extensions
-  metalsmith.use(rename([
-    [/\.hbs$/, '.html'],
-    [/\.md$/, '.html']
-  ]))
 
   // Build Metalsmith or error out
   metalsmith.build(function (err) {
