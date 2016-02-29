@@ -62,7 +62,7 @@
     "stylelint": "4.3.4",
     "stylelint-config-suitcss": "3.0.0",
     "susy": "2.2.12",
-    "webpack": "1.12.13",
+    "webpack": "1.12.14",
     "yargs": "3.32.0"
   },
   "dependencies": {
