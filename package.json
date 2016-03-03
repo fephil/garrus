@@ -57,7 +57,7 @@
     "postcss-scss": "0.1.6",
     "require-dir": "0.3.0",
     "run-sequence": "1.1.5",
-    "sass-mq": "3.2.6",
+    "sass-mq": "3.2.7",
     "stylelint": "4.4.0",
     "stylelint-config-suitcss": "4.0.0",
     "susy": "2.2.12",
