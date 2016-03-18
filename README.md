@@ -6,11 +6,11 @@
 
 **A modern, opinionated frontend workflow for building a static website and blog.**
 
-* Author: [Phil Lennon](http://frontendphil.com)
-* Source: [github.com/fephil/foley](http://github.com/fephil/foley)
-* Issues and Suggestions: [github.com/fephil/foley/issues](http://github.com/fephil/foley/issues)
+* Author: [Phil Lennon](https://frontendphil.com)
+* Source: [github.com/fephil/foley](https://github.com/fephil/foley)
+* Issues and Suggestions: [github.com/fephil/foley/issues](https://github.com/fephil/foley/issues)
 * Download: [https://github.com/fephil/foley/releases](https://github.com/fephil/foley/releases)
-* Twitter: [@frontendphil](http://twitter.com/frontendphil)
+* Twitter: [@frontendphil](https://twitter.com/frontendphil)
 * Email: [enquiry@frontendphil.com](mailto:enquiry@frontendphil.com)
 
 ***
@@ -41,23 +41,24 @@ Comments, suggestions & pull requests are always welcome. See the [issues list](
 
 Download the latest stable release from [GitHub](https://github.com/fephil/foley/releases). Once this has been done:
 
-* Install Node 4 LTS or 5 stable (preferred),
+* Install Node 4 LTS,
+* (Recommended) Run in Terminal: `npm i npm -g` (Update NPM to latest version),
 * Run in Terminal: `npm i gulp-cli -g` (Gulp does not need to be installed globally),
 * Navigate to the workflow folder in command line Terminal,
 * Run: `npm i`.
 
-Please note, there are a large amount of development dependencies to install due to the 'all in one' nature of this workflow. It could possibly take several minutes to install the modules.
+Please note, there are a large amount of development dependencies to install due to the 'all in one' nature of this workflow. It could possibly take several minutes to install all the modules.
 
 ### Optional Installs
 
-The following plugins for Atom are recommended but not required:
+In your editor of choice, the following plugins are recommended but not required. Note the plugin names might be slightly different depending on your editor.
 
 * editorconfig,
+* tabs-to-spaces,
 * linter,
 * linter-handlebars,
 * linter-js-standard,
-* linter-stylelint,
-* tabs-to-spaces.
+* linter-stylelint.
 
 ## Usage
 
