@@ -2,8 +2,8 @@ git:
   depth: 1
 language: node_js
 node_js:
-  - 'lts'
-  - 'stable'
+  - '4'
+  - '5'
 cache:
   directories:
     - node_modules
