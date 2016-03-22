@@ -4,7 +4,7 @@ var webpack = require('webpack')
 var CommonsChunkPlugin = require(__dirname + '/node_modules/webpack/lib/optimize/CommonsChunkPlugin')
 
 // Create plugins array
-var plugins = [
+const plugins = [
   new CommonsChunkPlugin('commons.js'),
   new webpack.ProvidePlugin({
     $: 'jquery',
@@ -33,8 +33,11 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'babel',
-        exclude: /(node_modules|bower_components)/
+        query: {
+          presets: ['es2015']
+        }
       }
     ]
   },
