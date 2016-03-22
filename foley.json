@@ -42,10 +42,7 @@
         "rename": true
       },
       "metalsmith-in-place": {
-        "engine": "handlebars",
-        "pattern": "*.hbs",
-        "partials": "./src/partials",
-        "rename": true
+        "engine": "handlebars"
       }
     }
   }
