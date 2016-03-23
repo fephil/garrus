@@ -1,7 +1,6 @@
 /* global $ */
 
 import Holder from 'holderjs'
-import FastClick from 'fastclick'
 import svg4everybody from 'svg4everybody'
 
 // jQuery test
@@ -14,12 +13,22 @@ if ('querySelector' in document && 'addEventListener' in window) {
   html.classList.remove('no-js')
   html.classList.add('js')
 
-  // Add fastclick
-  FastClick.attach(document.body)
+  // Check if we need fastclick
+  if ('touchAction' in document.body.style) {
+    document.body.style.touchAction = 'manipulation'
+  } else {
+    require.ensure(['fastclick'], (require) => {
+      const FastClick = require('fastclick')
 
-  // Run Holder
-  Holder.run({})
+      window.addEventListener('load', () => {
+        FastClick.attach(document.body)
+      })
+    }, 'fastclick')
+  }
 
   // SVG support
   svg4everybody()
+
+  // Run Holder
+  Holder.run({})
 }
