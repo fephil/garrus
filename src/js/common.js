@@ -2,6 +2,7 @@
 
 import Holder from 'holderjs'
 import Svg4everybody from 'svg4everybody'
+import 'feature.js'
 
 // jQuery test
 console.log('testing if jquery is loaded globally:')
