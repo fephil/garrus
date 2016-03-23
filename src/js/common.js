@@ -1,7 +1,7 @@
 /* global $ */
 
 import Holder from 'holderjs'
-import svg4everybody from 'svg4everybody'
+import Svg4everybody from 'svg4everybody'
 
 // jQuery test
 console.log('testing if jquery is loaded globally:')
@@ -27,7 +27,7 @@ if ('querySelector' in document && 'addEventListener' in window) {
   }
 
   // SVG support
-  svg4everybody()
+  Svg4everybody()
 
   // Run Holder
   Holder.run({})
