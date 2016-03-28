@@ -19,7 +19,7 @@
     "test": "gulp deploy --production --debug"
   },
   "devDependencies": {
-    "autoprefixer": "6.3.4",
+    "autoprefixer": "6.3.5",
     "babel-core": "6.7.4",
     "babel-eslint": "6.0.0",
     "babel-loader": "6.2.4",
