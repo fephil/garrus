@@ -15,11 +15,16 @@ gulp.task('crticalcss', () => {
   .pipe(gulpif(argv.debug === true, debug({title: 'CSS Inlined:'})))
   .pipe(criticalcss({
     base: config.paths.build + '/',
-    width: 320,
-    height: 480,
     minify: true,
     extract: false,
-    inline: true
+    inline: true,
+    dimensions: [{
+      width: 320,
+      height: 480
+    }, {
+      width: 1200,
+      height: 900
+    }]
   }))
   .pipe(gulp.dest(config.paths.build))
 })
