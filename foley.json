@@ -9,9 +9,9 @@
     "icons": "src/icons/",
     "img": "src/img/",
     "js": "src/js/",
-    "layouts": "src/layouts",
-    "pages": "src/pages",
-    "partials": "src/partials"
+    "layouts": "src/layouts/",
+    "pages": "src/pages/",
+    "partials": "src/partials/"
   },
   "autoprefixer": {
     "browsers": ["last 2 versions", "IE >= 10"]
