@@ -15,12 +15,8 @@ gulp.task('watch', () => {
   gulp.watch(config.paths.js + '**/*.js', ['webpack'])
   gulp.watch(config.paths.img + '{,**/}*.{png,jpg,gif,svg}', ['img'])
   gulp.watch(config.paths.icons + '**/*.svg', ['svgsprite'])
-  gulp.watch(config.paths.fonts + '**/*', ['copy'])
-  gulp.watch([
-    config.paths.layouts + '**/*.hbs',
-    config.paths.pages + '**/*.hbs',
-    config.paths.partials + '**/*.hbs'
-  ], ['metalsmith'])
+  gulp.watch([config.paths.fonts + '**/*', config.paths.files + '**/*'], ['copy'])
+  gulp.watch([config.paths.layouts + '**/*.hbs', config.paths.pages + '**/*.hbs', config.paths.partials + '**/*.hbs'], ['metalsmith'])
 })
 
 // Build website, either with development or minified assets and run server with live reloading
