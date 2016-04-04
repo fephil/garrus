@@ -14,7 +14,7 @@ gulp.task('crticalcss', () => {
   return gulp.src(config.paths.build + '**/*.html')
   .pipe(gulpif(argv.debug === true, debug({title: 'CSS Inlined:'})))
   .pipe(criticalcss({
-    base: config.paths.build + '/',
+    base: config.paths.build,
     minify: true,
     extract: false,
     inline: true,
