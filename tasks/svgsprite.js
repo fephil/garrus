@@ -13,7 +13,7 @@ var svgConfig = {
   mode: {
     symbol: {
       dest: config.paths.build,
-      sprite: 'assets/sprite.svg',
+      sprite: 'assets/svgsprite.svg',
       render: {
         scss: {
           dest: '../' + config.paths.scss + 'partials/_svgsprite.scss'
@@ -22,6 +22,7 @@ var svgConfig = {
       example: true
     }
   },
+  log: 'info',
   svg: {
     xmlDeclaration: false,
     doctypeDeclaration: false
