@@ -35,7 +35,7 @@ gulp.task('deploy', callback => {
   runSequence(
     'clean',
     'metalsmith',
-    ['html', 'svgsprite', 'scss', 'webpack', 'img', 'copy'],
+    ['htmlmin', 'svgsprite', 'scss', 'webpack', 'img', 'copy'],
     'crticalcss',
     callback
   )
