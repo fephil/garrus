@@ -63,14 +63,14 @@
     "stylelint-config-suitcss": "5.0.0",
     "susy": "2.2.12",
     "webpack": "1.12.14",
-    "yargs": "4.3.2"
+    "yargs": "4.4.0"
   },
   "dependencies": {
     "fastclick": "1.0.6",
     "feature.js": "1.0.0",
     "holderjs": "2.9.3",
     "jquery": "2.2.2",
-    "lodash": "4.8.0",
+    "lodash": "4.8.2",
     "svg4everybody": "2.0.3"
   },
   "babel": {
