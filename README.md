@@ -1,4 +1,4 @@
-# foley v0.3.4
+# foley v0.3.5
 
 [![Build Status](https://travis-ci.org/fephil/foley.svg?branch=master)](https://travis-ci.org/fephil/foley)
 [![devDependency Status](https://david-dm.org/fephil/foley/dev-status.svg)](https://david-dm.org/fephil/foley#info=devDependencies)
