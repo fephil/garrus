@@ -17,3 +17,7 @@ npm-debug.log
 
 # Project Specific #
 ######################
+
+# Test generated files #
+test/results
+######################
