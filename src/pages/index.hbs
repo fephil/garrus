@@ -16,6 +16,13 @@ appName: home
       {{/each}}
     </ul>
 
+    <h2 class="h3">Example metadata</h1>
+    <ul>
+      <li>From global: {{global.url}}</li>
+      <li>From example: {{example.text}}</li>
+      <li>From sub folder subdata: {{subdata.data1}}</li>
+    </ul>    
+
     <h2 class="h3">Icon Test</h2>
     <p><a href="#">{{>icon name="facebook" class="icon-test-class"}} <span class="hide-screen">Facebook</span></a> <a href="#">{{>icon name="twitter" class="icon-test-class"}} <span class="hide-screen">Twitter</span></a></p>
   </div>

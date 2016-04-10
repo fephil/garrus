@@ -11,13 +11,17 @@
     "js": "src/js/",
     "layouts": "src/layouts/",
     "pages": "src/pages/",
-    "partials": "src/partials/"
+    "partials": "src/partials/",
+    "data": "src/data/"
   },
   "autoprefixer": {
     "browsers": ["last 2 versions", "IE >= 10"]
   },
   "metalsmith": {
     "plugins": {
+      "metalsmith-metadata-directory": {
+        "directory": "./src/data/**/*.json"
+      },
       "metalsmith-drafts": true,
       "metalsmith-markdownit": {
          "typographer": true,
