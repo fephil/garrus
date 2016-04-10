@@ -8,6 +8,15 @@ import { argv as argv } from 'yargs'
 import debug from 'gulp-debug'
 import gulpif from 'gulp-if'
 
+// Enable or disable example HTML page depending on production flag
+let examplePage
+
+if (argv.production === true) {
+  examplePage = false
+} else {
+  examplePage = true
+}
+
 // SVG sprite config
 var svgConfig = {
   mode: {
@@ -19,7 +28,7 @@ var svgConfig = {
           dest: '../' + config.paths.scss + 'partials/_svgsprite.scss'
         }
       },
-      example: true
+      example: examplePage
     }
   },
   log: 'info',
