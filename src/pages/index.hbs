@@ -9,12 +9,15 @@ appName: home
 <div class="container grid-test">
   <div class="grid-test__sidebar">
     <h1 class="h2">Example data from blog</h1>
-    <p><a href="/blog/">Index page</a></p>
     <ul>
+      <li><a href="/blog/">Blog index page</a></li>
       {{#each collections.blog}}
-        <li><h3 class="h3"><a href="{{this.path}}">{{this.title}}</a></h3></li>
+        <li><a href="{{this.path}}">{{this.title}}</a></li>
       {{/each}}
     </ul>
+
+    <h2 class="h3">Icon Test</h2>
+    <p><a href="#">{{>icon name="facebook" class="icon-test-class"}} <span class="hide-screen">Facebook</span></a> <a href="#">{{>icon name="twitter" class="icon-test-class"}} <span class="hide-screen">Twitter</span></a></p>
   </div>
 
    <div class="grid-test__main">
