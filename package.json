@@ -71,7 +71,7 @@
     "feature.js": "1.0.0",
     "holderjs": "2.9.3",
     "jquery": "2.2.3",
-    "lodash": "4.10.0",
+    "lodash": "4.11.0",
     "svg4everybody": "2.0.3"
   },
   "babel": {
