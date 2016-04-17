@@ -20,7 +20,7 @@ gulp.task('watch', () => {
 })
 
 // Build website, either with development or minified assets and run server with live reloading
-gulp.task('default', callback => {
+gulp.task('default', (callback) => {
   runSequence(
     'clean',
     'metalsmith',
@@ -31,7 +31,7 @@ gulp.task('default', callback => {
 })
 
 // Build website, either with development or minified assets depending on flag
-gulp.task('deploy', callback => {
+gulp.task('deploy', (callback) => {
   runSequence(
     'clean',
     'metalsmith',
@@ -42,10 +42,10 @@ gulp.task('deploy', callback => {
 })
 
 // Run the audit task to check the code
-gulp.task('auditcode', callback => {
+gulp.task('auditcode', (callback) => {
   runSequence(
     'scsslint',
-    'jslint',
+    'standardlint',
     callback
   )
 })
@@ -53,7 +53,7 @@ gulp.task('auditcode', callback => {
 // Run the audit task to check the built website for accessibility
 // NOTE: Not used yet
 /*
-gulp.task('auditsite', callback => {
+gulp.task('auditsite', (callback) => {
   runSequence(
     'deploy',
     callback
@@ -64,7 +64,7 @@ gulp.task('auditsite', callback => {
 // Run the audit task to check performance using ...
 // NOTE: Not used yet
 /*
-gulp.task('auditperf', callback => {
+gulp.task('auditperf', (callback) => {
   runSequence(
     'deploy',
     callback

@@ -6,7 +6,7 @@ import gulp from 'gulp'
 import standard from 'gulp-standard'
 
 // Linting task
-gulp.task('jslint', () => {
+gulp.task('standardlint', () => {
   return gulp.src(config.paths.js + '**/*.js')
   .pipe(standard())
   .pipe(standard.reporter('default', {
