@@ -3,12 +3,11 @@ import config from '../foley.json'
 import gulp from 'gulp'
 
 // Specific task modules
-import gutil from 'gulp-util'
 import browserSync from 'browser-sync'
 import Metalsmith from 'metalsmith'
 
 // Metalsmith task
-gulp.task('metalsmith', (callback) => {
+gulp.task('metalsmith', function (callback) {
   // Metalsmith instance and options
   var metalsmith = new Metalsmith('.').clean(false)
   var plugins = config.metalsmith.plugins || {}
@@ -27,10 +26,10 @@ gulp.task('metalsmith', (callback) => {
   // Build Metalsmith or error out
   metalsmith.build(function (err) {
     if (err) {
-      throw new gutil.PluginError('metalsmith', err)
+      return callback(err)
     }
 
     browserSync.reload()
-    callback
+    callback()
   })
 })
