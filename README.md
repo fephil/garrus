@@ -1,4 +1,4 @@
-# foley v0.4.0
+# foley v0.4.1
 
 [![Build Status](https://travis-ci.org/fephil/foley.svg?branch=master)](https://travis-ci.org/fephil/foley)
 [![devDependency Status](https://david-dm.org/fephil/foley/dev-status.svg)](https://david-dm.org/fephil/foley#info=devDependencies)
@@ -22,7 +22,7 @@ Foley is an 'all-in-one' workflow designed to quickly build a static website and
 This workflow contains the following key features:
 
 * Gulp,
-* Metalsmith (with Handlebars templates, Blogging & Markdown support)
+* Metalsmith (with Handlebars templates, JSON Data, Blog & Markdown support)
 * Webpack with jQuery integration,
 * Babel with ES2015 support,
 * Standardjs linting,
