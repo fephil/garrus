@@ -20,6 +20,6 @@ gulp.task('webpack', (callback) => {
     }))
 
     browserSync.reload()
-    callback
+    callback()
   })
 })
