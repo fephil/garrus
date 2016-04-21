@@ -42,23 +42,23 @@ Comments, suggestions & pull requests are always welcome. See the [issues list](
 Download the latest stable release from [GitHub](https://github.com/fephil/foley/releases). Once this has been done:
 
 * Install Node 4 LTS,
-* (Recommended) Run in Terminal: `npm i npm -g` (Update NPM to latest version),
+* (Recommended) Run in Terminal: `npm i npm -g` (Update to latest NPM 3 version),
 * Run in Terminal: `npm i gulp-cli -g` (Gulp does not need to be installed globally),
 * Navigate to the workflow folder in command line Terminal,
 * Run: `npm i`.
 
-Please note, there are a large amount of development dependencies to install due to the 'all in one' nature of this workflow. It could possibly take several minutes to install all the modules.
+Please note that there are a large amount of development dependencies to install, due to the 'all in one' nature of this workflow. It could possibly take a long time to install all the required modules.
 
 ### Optional Installs
 
-In your editor of choice, the following plugins are recommended but not required. Note the plugin names might be slightly different depending on your editor.
+In your code editor of choice, the following plugins are recommended but not required. Note the plugin names might be slightly different depending on your editor.
 
 * editorconfig,
-* tabs-to-spaces,
 * linter,
 * linter-handlebars,
 * linter-js-standard,
-* linter-stylelint.
+* linter-stylelint,
+* tabs-to-spaces.
 
 ## Usage
 
@@ -76,14 +76,15 @@ Run these tasks in your command line Terminal:
 * The `--production` flag builds minified assets with no sourcemaps,
 * The `--debug` flag shows the files being created in each task (if the task has a pipe).
 
-## Known issues
-
-* No full documentation yet - [#35](https://github.com/fephil/foley/issues/35),
-* No fully featured example website yet - [#44](https://github.com/fephil/foley/issues/44).
+More documentation is in progress.
 
 ## Credit
 
 * Sample images from Unsplash,
 * Sample icons from the Street Support project.
+
+## License
+
+MIT
 
 **Have a nice day!**
