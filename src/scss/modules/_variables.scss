@@ -10,10 +10,10 @@ $mq-responsive: true;
 // across team members. It will improve communication between
 // stakeholders, designers, developers, and testers.
 $mq-breakpoints: (
-  xs:  320px,
+  xs:  360px,
   s:   480px,
-  m:   740px,
-  l:   980px,
+  m:   700px,
+  l:   900px,
   xl:  1300px,
 );
 
@@ -55,7 +55,7 @@ $susy: (
   container: $site-container,
   gutters: $grid-gutter,
   global-box-sizing: border-box,
-  gutter-position: split,
+  gutter-position: after,
   debug: (
     image: $grid-debug
   )
