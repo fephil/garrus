@@ -1,7 +1,7 @@
 {
   "name": "foley",
   "description": "A modern, opinionated frontend workflow for building a static website and blog",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "author": "Phil Lennon <enquiry@frontendphil.com>",
   "private": true,
   "license": "MIT",
