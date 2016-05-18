@@ -27,7 +27,7 @@
     "browser-sync": "2.12.3",
     "critical": "0.7.2",
     "css-mqpacker": "4.0.1",
-    "cssnano": "3.5.2",
+    "cssnano": "3.6.1",
     "del": "2.2.0",
     "eyeglass": "0.8.3",
     "gulp": "3.9.1",
