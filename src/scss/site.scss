@@ -4,7 +4,7 @@
 @import 'modules/mixins';
 
 // Vendor files
-@import 'vendor/normalize';
+@import "../../node_modules/normalize.css/normalize.css";
 @import 'sass-mq'; // from npm
 @import 'susy'; // from npm
 
