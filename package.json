@@ -73,7 +73,7 @@
     "normalize.css": "4.1.1",
     "sass-mq": "3.2.9",
     "susy": "2.2.12",
-    "svg4everybody": "2.0.3"
+    "svg4everybody": "2.1.0"
   },
   "babel": {
     "presets": [
