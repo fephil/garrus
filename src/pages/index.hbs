@@ -12,7 +12,9 @@ appName: home
     <ul>
       <li><a href="/blog/">Blog index page</a></li>
       {{#each collections.blog}}
-        <li><a href="{{this.path}}">{{this.title}}</a></li>
+        <li>
+          <a href="{{this.path}}">{{this.title}} {{#ifCond this.title '==' 'Blog Post Test'}} - Condtional handlebars test{{/ifCond}}</a>
+        </li>
       {{/each}}
     </ul>
 

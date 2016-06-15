@@ -44,9 +44,8 @@
           "pattern": "blog/!(index).md"
         }
       },
-      "metalsmith-discover-helpers": {
-        "directory": "./src/helpers",
-        "pattern": "/\\.js$/"
+      "metalsmith-register-helpers": {
+        "directory": "./src/helpers"
       },
       "metalsmith-layouts": {
         "engine": "handlebars",
