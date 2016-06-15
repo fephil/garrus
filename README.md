@@ -17,21 +17,21 @@
 
 ## About
 
-Foley is an 'all-in-one' workflow designed to quickly build a static website and blog using the latest techniques in Frontend development. Use foley as a base and tailor to your specific needs.
+Foley is an 'all-in-one' workflow designed to quickly build a static website and blog using modern techniques in Frontend development. Use foley as a base, fork it and tailor to your specific needs.
 
-This workflow contains the following key features:
+This workflow contains:
 
 * Gulp,
-* Metalsmith (with Handlebars templates, JSON Data, Blog & Markdown support)
+* Metalsmith (with Handlebars templates, JSON metadata, Blog & Markdown support)
 * Webpack with jQuery integration,
 * Babel with ES2015 support,
 * Standardjs linting,
 * Sass & PostCSS,
-* CSS Stylelint with SUIT ruleset,
+* CSS Stylelint,
 * Critical inlined CSS,
 * Sass-mq & Susy grid system,
 * Image minification,
-* SVG sprite,
+* SVG spriting,
 * HTML minification,
 * Easy to use with simple Gulp tasks & configuration from global files,
 
@@ -42,12 +42,11 @@ Comments, suggestions & pull requests are always welcome. See the [issues list](
 Download the latest stable release from [GitHub](https://github.com/fephil/foley/releases). Once this has been done:
 
 * Install Node 4 LTS,
-* (Recommended) Run in Terminal: `npm i npm -g` (Update to latest NPM 3 version),
 * Run in Terminal: `npm i gulp-cli -g` (Gulp does not need to be installed globally),
 * Navigate to the workflow folder in command line Terminal,
 * Run: `npm i`.
 
-Please note that there are a large amount of development dependencies to install, due to the 'all in one' nature of this workflow. It could possibly take a long time to install all the required modules.
+Please note that there are a large amount of development dependencies to install, due to the 'all in one' nature of the workflow. It could possibly take a long time to install all the required modules.
 
 ### Optional Installs
 
@@ -57,8 +56,7 @@ In your code editor of choice, the following plugins are recommended but not req
 * linter,
 * linter-handlebars,
 * linter-js-standard,
-* linter-stylelint,
-* tabs-to-spaces.
+* linter-stylelint.
 
 ## Usage
 
@@ -80,8 +78,8 @@ More documentation is in progress.
 
 ## Credit
 
-* Sample images from Unsplash,
-* Sample icons from the Street Support project.
+* Sample images come from [Unsplash](https://unsplash.com),
+* Sample icons come from the [Street Support project](https://github.com/StreetSupport/streetsupport-web).
 
 ## License
 
