@@ -1,0 +1,8 @@
+.icon-demo {
+  fill: #111;
+  transition: fill 150ms linear;
+
+  &:hover {
+    fill: #ff0000;
+  }
+}

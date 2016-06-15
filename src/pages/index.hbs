@@ -8,7 +8,7 @@ appName: home
 
 <div class="container grid-test">
   <div class="grid-test__sidebar">
-    <h1 class="h2">Example data from blog</h1>
+    <h1 class="h3">Example data from blog</h1>
     <ul>
       <li><a href="/blog/">Blog index page</a></li>
       {{#each collections.blog}}
@@ -23,8 +23,11 @@ appName: home
       <li>From sub folder test.json: {{test.data1}}</li>
     </ul>
 
-    <h2 class="h3">Icon Test</h2>
-    <p><a href="#">{{>icon name="facebook" class="icon-test-class"}} <span class="hide-screen">Facebook</span></a> <a href="#">{{>icon name="twitter" class="icon-test-class"}} <span class="hide-screen">Twitter</span></a></p>
+    <h3 class="h3">Icon Demo</h3>
+    <ul style="list-style-type: none; margin:0; padding: 0;">
+      <li><a href="#">{{>icon name="facebook" class="icon-demo"}} <span class="hide-screen">Facebook</span></a></li>
+      <li><a href="#">{{>icon name="twitter" class="icon-demo"}} <span class="hide-screen">Twitter</span></a></li>
+    </ul>
   </div>
 
    <div class="grid-test__main">
