@@ -1,5 +1,4 @@
 // Media Queries
-
 // To enable support for browsers that do not support @media queries,
 // (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
 // Create a separate stylesheet served exclusively to these browsers,
@@ -10,12 +9,7 @@ $mq-responsive: true;
 // across team members. It will improve communication between
 // stakeholders, designers, developers, and testers.
 $mq-breakpoints: (
-  xs:  360px,
-  s:   480px,
-  m:   700px,
-  l:   900px,
-  xl:  1300px,
-);
+  xs:  360px, s:   480px, m:   700px, l:   900px, xl:  1300px, );
 
 // Define the breakpoint from the $mq-breakpoints list that should
 // be used as the target width when outputting a static stylesheet
@@ -35,8 +29,6 @@ $grid-gutter: .25; // Quarter of column width
 $column-small: 6;
 $column-large: 12;
 $grid-debug: show; // Change this to show or hide
-
-
 // Colours
 $brand-a: rgba(50, 120, 50, 1);
 $brand-b: rgba(50, 120, 50, .25);
@@ -49,14 +41,8 @@ $font-headline-weight: 700;
 
 // Default Grid Options
 // -----------------------------
-
 $susy: (
-  columns: $column-small,
-  container: $site-container,
-  gutters: $grid-gutter,
-  global-box-sizing: border-box,
-  gutter-position: after,
-  debug: (
+  columns: $column-small, container: $site-container, gutters: $grid-gutter, global-box-sizing: border-box, gutter-position: after, debug: (
     image: $grid-debug
   )
 );

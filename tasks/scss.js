@@ -20,9 +20,10 @@ import mqpacker from 'css-mqpacker'
 import cssnano from 'cssnano'
 
 // Postcss workflow modules
-import scss from 'postcss-scss'
+import syntax from 'postcss-scss'
 import reporter from 'postcss-reporter'
 import stylelint from 'stylelint'
+import stylefmt from 'stylefmt'
 
 // Output specific plugins
 const output = [
@@ -54,8 +55,15 @@ gulp.task('scss', () => {
   .pipe(browserSync.stream({match: '**/*.css'}))
 })
 
+// stylefmt task
+gulp.task('scssfmt', () => {
+  return gulp.src([config.paths.scss + '**/*.scss', '!' + config.paths.scss + 'vendor{,/**}'])
+  .pipe(postcss([stylefmt], {syntax: syntax}))
+  .pipe(gulp.dest(config.paths.scss))
+})
+
 // Stylelint task
 gulp.task('scsslint', () => {
   return gulp.src([config.paths.scss + '**/*.scss', '!' + config.paths.scss + 'vendor{,/**}'])
-  .pipe(postcss(workflow, {syntax: scss}))
+  .pipe(postcss(workflow, {syntax: syntax}))
 })

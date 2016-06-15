@@ -44,6 +44,7 @@ gulp.task('deploy', (callback) => {
 // Run the audit task to check the code
 gulp.task('auditcode', (callback) => {
   runSequence(
+    'scssfmt',
     'scsslint',
     'standardlint',
     callback
