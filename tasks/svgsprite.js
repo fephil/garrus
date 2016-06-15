@@ -7,6 +7,7 @@ import svgSprite from 'gulp-svg-sprite'
 import { argv as argv } from 'yargs'
 import debug from 'gulp-debug'
 import gulpif from 'gulp-if'
+import plumber from 'gulp-plumber'
 
 // Enable or disable example HTML page depending on production flag
 let examplePage
@@ -33,15 +34,19 @@ var svgConfig = {
   },
   log: 'info',
   svg: {
-    xmlDeclaration: false,
-    doctypeDeclaration: false
+    xmlDeclaration: true,
+    doctypeDeclaration: true
+  },
+  shape: {
+    transform: [], // disable svggo
   }
 }
 
 // SVG sprite task
-gulp.task('svgsprite', () => {
+gulp.task('svgsprite', function() {
   return gulp.src(config.paths.icons + '/**/*.svg')
     .pipe(gulpif(argv.debug === true, debug({title: 'SVG Spritesheet:'})))
-    .pipe(svgSprite(svgConfig))
+    .pipe(plumber())
+    .pipe(svgSprite(svgConfig)).on('error', function(error){ console.log(error) })
     .pipe(gulp.dest('.'))
-})
+});
