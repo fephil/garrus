@@ -29,7 +29,7 @@
     "critical": "0.7.3",
     "css-mqpacker": "5.0.1",
     "cssnano": "3.7.1",
-    "del": "2.2.0",
+    "del": "2.2.1",
     "gulp": "3.9.1",
     "gulp-debug": "2.1.2",
     "gulp-htmlmin": "2.0.0",
