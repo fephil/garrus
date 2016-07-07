@@ -59,7 +59,7 @@
     "require-dir": "0.3.0",
     "run-sequence": "1.2.1",
     "stylefmt": "3.5.0",
-    "stylelint": "6.7.0",
+    "stylelint": "6.9.0",
     "stylelint-config-standard": "9.0.0",
     "webpack": "1.13.1",
     "yargs": "4.7.1"
