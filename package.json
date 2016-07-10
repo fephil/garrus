@@ -62,7 +62,7 @@
     "stylelint": "6.7.0",
     "stylelint-config-standard": "9.0.0",
     "webpack": "1.13.1",
-    "yargs": "4.7.1"
+    "yargs": "4.8.0"
   },
   "dependencies": {
     "fastclick": "1.0.6",
