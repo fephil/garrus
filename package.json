@@ -59,7 +59,7 @@
     "postcss-scss": "0.1.8",
     "require-dir": "0.3.0",
     "run-sequence": "1.2.2",
-    "stylefmt": "4.1.1",
+    "stylefmt": "4.2.2",
     "stylelint": "6.9.0",
     "stylelint-config-standard": "10.0.0",
     "webpack": "1.13.1",
