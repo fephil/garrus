@@ -1,6 +1,5 @@
 {
   "title": "Example Website Title",
-  "url": "/",
-  "jsVersion": "0.1",
-  "cssVersion": "0.1"  
+  "jsVersion": "20160815",
+  "cssVersion": "20160815"
 }
