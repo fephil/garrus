@@ -41,7 +41,7 @@ Comments, suggestions & pull requests are always welcome. See the [issues list](
 
 Download the latest stable release from [GitHub](https://github.com/fephil/garrus/releases). Once this has been done:
 
-* Install Node 4 LTS,
+* Install Node V4 LTS or Node V6,
 * Run in Terminal: `npm i gulp-cli -g` (Gulp does not need to be installed globally),
 * Navigate to the workflow folder in command line Terminal,
 * Run: `npm i`.
@@ -84,5 +84,3 @@ More documentation is in progress.
 ## License
 
 MIT
-
-**Have a nice day!**
