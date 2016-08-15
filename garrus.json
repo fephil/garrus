@@ -2,7 +2,6 @@
   "paths": {
     "build": "_dist/",
     "buildAssets": "_dist/assets/",
-    "svgicon": "_svgicon",
     "scss": "src/scss/",
     "files": "src/files/",
     "fonts": "src/fonts/",

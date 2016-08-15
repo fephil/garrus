@@ -8,7 +8,6 @@ import del from 'del'
 // Clean task
 gulp.task('clean', () => {
   return del([
-    config.paths.build,
-    config.paths.svgicon
+    config.paths.build
   ])
 })
