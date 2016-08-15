@@ -1,15 +1,15 @@
-# foley v0.5.2
+# garrus v0.5.3
 
-[![Build Status](https://travis-ci.org/fephil/foley.svg?branch=master)](https://travis-ci.org/fephil/foley)
-[![devDependency Status](https://david-dm.org/fephil/foley/dev-status.svg)](https://david-dm.org/fephil/foley#info=devDependencies)
-[![Dependency Status](https://david-dm.org/fephil/foley.svg)](https://david-dm.org/fephil/foley)
+[![Build Status](https://travis-ci.org/fephil/garrus.svg?branch=master)](https://travis-ci.org/fephil/garrus)
+[![devDependency Status](https://david-dm.org/fephil/garrus/dev-status.svg)](https://david-dm.org/fephil/garrus#info=devDependencies)
+[![Dependency Status](https://david-dm.org/fephil/garrus.svg)](https://david-dm.org/fephil/garrus)
 
 **A modern, opinionated frontend workflow for building a static website and blog.**
 
 * Author: [Phil Lennon](https://frontendphil.com)
-* Source: [github.com/fephil/foley](https://github.com/fephil/foley)
-* Issues and Suggestions: [github.com/fephil/foley/issues](https://github.com/fephil/foley/issues)
-* Download: [https://github.com/fephil/foley/releases](https://github.com/fephil/foley/releases)
+* Source: [github.com/fephil/garrus](https://github.com/fephil/garrus)
+* Issues and Suggestions: [github.com/fephil/garrus/issues](https://github.com/fephil/garrus/issues)
+* Download: [https://github.com/fephil/garrus/releases](https://github.com/fephil/garrus/releases)
 * Twitter: [@frontendphil](https://twitter.com/frontendphil)
 * Email: [enquiry@frontendphil.com](mailto:enquiry@frontendphil.com)
 
@@ -17,7 +17,7 @@
 
 ## About
 
-Foley is an 'all-in-one' workflow designed to quickly build a static website and blog using modern techniques in Frontend development. Use foley as a base, fork it and tailor to your specific needs.
+Garrus is an 'all-in-one' workflow designed to quickly build a static website and blog using modern techniques in Frontend development. Use garrus as a base, fork it and tailor to your specific needs.
 
 This workflow contains:
 
@@ -35,11 +35,11 @@ This workflow contains:
 * HTML minification,
 * Easy to use with simple Gulp tasks & configuration from global files,
 
-Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/fephil/foley/issues) for more information about future enhancements and changes.
+Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/fephil/garrus/issues) for more information about future enhancements and changes.
 
 ## Install
 
-Download the latest stable release from [GitHub](https://github.com/fephil/foley/releases). Once this has been done:
+Download the latest stable release from [GitHub](https://github.com/fephil/garrus/releases). Once this has been done:
 
 * Install Node 4 LTS,
 * Run in Terminal: `npm i gulp-cli -g` (Gulp does not need to be installed globally),

@@ -1,5 +1,5 @@
 // Load global config and gulp
-import config from '../foley.json'
+import config from '../garrus.json'
 import gulp from 'gulp'
 
 // Specific task modules

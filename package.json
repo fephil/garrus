@@ -1,16 +1,16 @@
 {
-  "name": "foley",
+  "name": "garrus",
   "description": "A modern, opinionated frontend workflow for building a static website and blog",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "author": "Phil Lennon <enquiry@frontendphil.com>",
   "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fephil/foley.git"
+    "url": "https://github.com/fephil/garrus.git"
   },
   "bugs": {
-    "url": "https://github.com/fephil/foley/issues"
+    "url": "https://github.com/fephil/garrus/issues"
   },
   "engines": {
     "node": ">= 4"
@@ -53,7 +53,6 @@
     "metalsmith-metadata-directory": "1.0.0",
     "metalsmith-permalinks": "0.5.0",
     "metalsmith-register-helpers": "0.2.0",
-    "path": "0.12.7",
     "postcss-pxtorem": "3.3.1",
     "postcss-reporter": "1.4.1",
     "postcss-scss": "0.1.9",
