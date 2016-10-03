@@ -26,7 +26,7 @@ module.exports = {
     path: path.join(__dirname, '/_dist/assets/js/'),
     filename: '[name].bundle.js',
     chunkFilename: '[id].chunk.js',
-    publicPath: 'assets/js/'
+    publicPath: '/assets/js/'
   },
   plugins: plugins,
   module: {
@@ -40,8 +40,5 @@ module.exports = {
         }
       }
     ]
-  },
-  standard: {
-    parser: 'babel-eslint'
   }
 }
