@@ -1,4 +1,4 @@
-# garrus v0.5.3
+# garrus v0.6.0-alpha1
 
 [![Build Status](https://travis-ci.org/fephil/garrus.svg?branch=master)](https://travis-ci.org/fephil/garrus)
 [![devDependency Status](https://david-dm.org/fephil/garrus/dev-status.svg)](https://david-dm.org/fephil/garrus#info=devDependencies)
