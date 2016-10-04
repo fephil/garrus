@@ -38,7 +38,7 @@ var svgConfig = {
     doctypeDeclaration: true
   },
   shape: {
-    transform: [], // disable svggo
+    transform: ['svgo'], // default svgo settings
   }
 }
 
