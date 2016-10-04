@@ -17,23 +17,23 @@
 
 ## About
 
-Garrus is an 'all-in-one' workflow designed to quickly build a static website and blog using modern techniques in Frontend development. Use garrus as a base, fork it and tailor to your specific needs.
+Garrus is an 'all-in-one' workflow designed to quickly build a static website and blog using modern techniques in Frontend development. Use Garrus as a base, fork it and tailor to your specific needs.
 
 This workflow contains:
 
 * Gulp,
-* Metalsmith (with Handlebars templates, JSON metadata, Blog & Markdown support)
+* Metalsmith (with Handlebars templates, JSON metadata, Blog and Markdown support)
 * Webpack with jQuery integration,
 * Babel with ES2015 support,
-* Standardjs linting,
-* Sass & PostCSS,
-* CSS Stylelint,
+* SASS & PostCSS,
 * Critical inlined CSS,
 * Sass-mq & Susy grid system,
 * Image minification,
 * SVG spriting,
 * HTML minification,
-* Easy to use with simple Gulp tasks & configuration from global files,
+* StandardJS linting,
+* CSS Stylelinting,
+* Easy to use with simple Gulp tasks & configuration,
 
 Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/fephil/garrus/issues) for more information about future enhancements and changes.
 
