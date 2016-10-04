@@ -2,11 +2,9 @@
 
 import Holder from 'holderjs'
 import Svg4everybody from 'svg4everybody'
-import 'feature.js'
 
-// jQuery test
-console.log('testing if jquery is loaded globally:')
-console.log($)
+// Webpack jQuery test
+console.log('testing if jquery is loaded globally:', $)
 
 // Cuts the mustard check to add js class
 if ('querySelector' in document && 'addEventListener' in window) {
