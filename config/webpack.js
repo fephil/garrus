@@ -32,7 +32,7 @@ module.exports = {
     path: './' + paths.buildAssets + 'js/',
     filename: '[name].bundle.js',
     chunkFilename: '[id].chunk.js',
-    publicPath: '/' + paths.buildAssets + 'js/'
+    publicPath: '/assets/js/'
   },
   devtool: theSourcemap,
   plugins: plugins,
