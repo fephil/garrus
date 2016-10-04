@@ -5,12 +5,12 @@
     },
     "metalsmith-drafts": true,
     "metalsmith-markdownit": {
-        "typographer": true,
-        "html": true
-      },
-      "metalsmith-permalinks": {
-        "pattern": "blog/:title"
-      },
+      "typographer": true,
+      "html": true
+    },
+    "metalsmith-permalinks": {
+      "pattern": "blog/:title"
+    },
     "metalsmith-collections": {
       "posts": {
         "pattern": "blog/!(index).md"
