@@ -4,7 +4,7 @@ import './common'
 import 'feature.js'
 import { testFunction } from './example'
 
-// Cuts the mustard check
+// Cuts the mustard check to run modules
 if ('querySelector' in document && 'addEventListener' in window) {
   console.log('run home modules')
 
