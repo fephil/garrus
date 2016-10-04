@@ -2,6 +2,7 @@ import paths from '../config/paths.json'
 import { argv as argv } from 'yargs'
 import webpack from 'webpack'
 import CommonsChunkPlugin from '../node_modules/webpack/lib/optimize/CommonsChunkPlugin'
+let theSourcemap
 
 // Create plugins array
 const plugins = [
@@ -13,8 +14,13 @@ const plugins = [
 ]
 
 // Add Uglify task to plugins array if there is a production flag
+// If not production, generate sourcemap
 if (argv.production) {
   plugins.push(new webpack.optimize.UglifyJsPlugin())
+  theSourcemap = ''
+}
+else {
+  theSourcemap = 'source-map'
 }
 
 module.exports = {
@@ -28,6 +34,7 @@ module.exports = {
     chunkFilename: '[id].chunk.js',
     publicPath: '/' + paths.buildAssets + 'js/'
   },
+  devtool: theSourcemap,
   plugins: plugins,
   module: {
     loaders: [
