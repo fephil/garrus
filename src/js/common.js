@@ -1,10 +1,6 @@
-require.ensure(['jquery', 'holderjs', 'svg4everybody'], function(require) {
-  const jquery = require('jquery')
+require.ensure(['holderjs', 'svg4everybody'], function(require) {
   const Holder = require('holderjs')
   const Svg4everybody = require('svg4everybody')
-
-  // Webpack jQuery test
-  console.log('testing if jquery is loaded globally:', $)
 
   // Cuts the mustard check to add js class
   if ('querySelector' in document && 'addEventListener' in window) {
