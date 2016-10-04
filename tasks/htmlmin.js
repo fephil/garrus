@@ -1,5 +1,5 @@
-// Load global config and gulp
-import config from '../garrus.json'
+// Load paths and gulp
+import paths from '../config/paths.json'
 import gulp from 'gulp'
 
 // Specific task modules
@@ -10,12 +10,12 @@ import htmlmin from 'gulp-htmlmin'
 
 // HTML minify task
 gulp.task('htmlmin', () => {
-  return gulp.src(config.paths.build + '**/*.html')
+  return gulp.src(paths.build + '**/*.html')
   .pipe(gulpif(argv.debug === true, debug({title: 'HTML Minified:'})))
   .pipe(gulpif(argv.production === true,
     htmlmin({
       collapseWhitespace: true
     })
   ))
-  .pipe(gulp.dest(config.paths.build))
+  .pipe(gulp.dest(paths.build))
 })

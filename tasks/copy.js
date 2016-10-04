@@ -1,5 +1,5 @@
-// Load global config and gulp
-import config from '../garrus.json'
+// Load paths and gulp
+import paths from '../config/paths.json'
 import gulp from 'gulp'
 
 // Specific task modules
@@ -9,16 +9,16 @@ import gulpif from 'gulp-if'
 
 // Copy files task
 gulp.task('copyfiles', () => {
-  return gulp.src(config.paths.files + '**/*', {})
+  return gulp.src(paths.files + '**/*', {})
   .pipe(gulpif(argv.debug === true, debug({title: 'Files Copied:'})))
-  .pipe(gulp.dest(config.paths.build))
+  .pipe(gulp.dest(paths.build))
 })
 
 // Copy fonts task
 gulp.task('copyfonts', () => {
-  return gulp.src(config.paths.fonts + '**/*', {})
+  return gulp.src(paths.fonts + '**/*', {})
   .pipe(gulpif(argv.debug === true, debug({title: 'Fonts Copied:'})))
-  .pipe(gulp.dest(config.paths.buildAssets + 'fonts'))
+  .pipe(gulp.dest(paths.buildAssets + 'fonts'))
 })
 
 // Main copy task

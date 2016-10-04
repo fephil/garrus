@@ -1,0 +1,32 @@
+{
+  "plugins": {
+    "metalsmith-metadata-directory": {
+      "directory": "./src/data/**/*.json"
+    },
+    "metalsmith-drafts": true,
+    "metalsmith-markdownit": {
+        "typographer": true,
+        "html": true
+      },
+      "metalsmith-permalinks": {
+        "pattern": "blog/:title"
+      },
+    "metalsmith-collections": {
+      "posts": {
+        "pattern": "blog/!(index).md"
+      }
+    },
+    "metalsmith-register-helpers": {
+      "directory": "./src/helpers"
+    },
+    "metalsmith-layouts": {
+      "engine": "handlebars",
+      "directory": "./src/layouts",
+      "partials": "./src/partials",
+      "rename": true
+    },
+    "metalsmith-in-place": {
+      "engine": "handlebars"
+    }
+  }
+}

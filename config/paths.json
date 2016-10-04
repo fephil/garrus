@@ -1,0 +1,14 @@
+{
+  "build": "_dist/",
+  "buildAssets": "_dist/assets/",
+  "scss": "src/scss/",
+  "files": "src/files/",
+  "fonts": "src/fonts/",
+  "icons": "src/icons/",
+  "img": "src/img/",
+  "js": "src/js/",
+  "layouts": "src/layouts/",
+  "pages": "src/pages/",
+  "partials": "src/partials/",
+  "data": "src/data/"
+}

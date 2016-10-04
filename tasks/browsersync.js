@@ -1,5 +1,5 @@
-// Load global config and gulp
-import config from '../garrus.json'
+// Load paths and gulp
+import paths from '../config/paths.json'
 import gulp from 'gulp'
 
 // Specific task modules
@@ -10,7 +10,7 @@ gulp.task('browsersync', () => {
   browserSync.init({
     notify: false,
     server: {
-      baseDir: config.paths.build
+      baseDir: paths.build
     }
   })
 })

@@ -1,7 +1,7 @@
-var argv = require('yargs').argv
-var path = require('path')
-var webpack = require('webpack')
-var CommonsChunkPlugin = require(__dirname + '/node_modules/webpack/lib/optimize/CommonsChunkPlugin')
+import paths from '../config/paths.json'
+import { argv as argv } from 'yargs'
+import webpack from 'webpack'
+import CommonsChunkPlugin from '../node_modules/webpack/lib/optimize/CommonsChunkPlugin'
 
 // Create plugins array
 const plugins = [
@@ -19,14 +19,14 @@ if (argv.production) {
 
 module.exports = {
   entry: {
-    home: __dirname + '/src/js/app-home',
-    blog: __dirname + '/src/js/app-blog'
+    home: './' + paths.js + 'app-home',
+    blog: './' + paths.js + 'app-blog'
   },
   output: {
-    path: path.join(__dirname, '/_dist/assets/js/'),
+    path: './' + paths.buildAssets + 'js/',
     filename: '[name].bundle.js',
     chunkFilename: '[id].chunk.js',
-    publicPath: '/assets/js/'
+    publicPath: '/' + paths.buildAssets + 'js/'
   },
   plugins: plugins,
   module: {

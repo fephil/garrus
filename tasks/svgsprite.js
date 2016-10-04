@@ -1,5 +1,5 @@
-// Load global config and gulp
-import config from '../garrus.json'
+// Load paths and gulp
+import paths from '../config/paths.json'
 import gulp from 'gulp'
 
 // Specific task modules
@@ -22,11 +22,11 @@ if (argv.production === true) {
 var svgConfig = {
   mode: {
     symbol: {
-      dest: config.paths.build,
+      dest: paths.build,
       sprite: 'assets/svgsprite.svg',
       render: {
         scss: {
-          dest: '../' + config.paths.scss + 'partials/_svgsprite.scss'
+          dest: '../' + paths.scss + 'partials/_svgsprite.scss'
         }
       },
       example: examplePage
@@ -44,7 +44,7 @@ var svgConfig = {
 
 // SVG sprite task
 gulp.task('svgsprite', function() {
-  return gulp.src(config.paths.icons + '/**/*.svg')
+  return gulp.src(paths.icons + '/**/*.svg')
     .pipe(gulpif(argv.debug === true, debug({title: 'SVG Spritesheet:'})))
     .pipe(plumber())
     .pipe(svgSprite(svgConfig)).on('error', function(error){ console.log(error) })

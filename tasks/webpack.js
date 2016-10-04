@@ -1,12 +1,11 @@
-// Load global config and gulp
-// import config from '../garrus.json'
+// Load gulp
 import gulp from 'gulp'
 
 // Specific task modules
+import webpackConfig from '../config/webpack.js'
 import gutil from 'gulp-util'
 import browserSync from 'browser-sync'
 import webpack from 'webpack'
-import webpackConfig from '../webpack.config.js'
 
 // Webpack build task
 gulp.task('webpack', (callback) => {

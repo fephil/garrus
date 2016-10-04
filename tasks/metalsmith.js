@@ -1,23 +1,25 @@
-// Load global config and gulp
-import config from '../garrus.json'
+// Load paths and gulp
+import paths from '../config/paths.json'
 import gulp from 'gulp'
 
 // Specific task modules
+import config from '../config/metalsmith.json'
 import browserSync from 'browser-sync'
 import Metalsmith from 'metalsmith'
 
 // Metalsmith task
 gulp.task('metalsmith', function (callback) {
   // Metalsmith instance and options
-  var metalsmith = new Metalsmith('.').clean(false)
-  var plugins = config.metalsmith.plugins || {}
-  metalsmith.source(config.paths.pages)
-  metalsmith.destination(config.paths.build)
+  const metalsmith = new Metalsmith('.').clean(false)
+  const plugins = config.plugins || {}
+
+  metalsmith.source(paths.pages)
+  metalsmith.destination(paths.build)
 
   // For each plugin
   Object.keys(plugins).forEach(function (key) {
-    var plugin = require(key) // Require Metalsmith plugins
-    var options = plugins[key] // Get options
+    let plugin = require(key) // Require Metalsmith plugins
+    let options = plugins[key] // Get options
 
     // Add plugins to Metalsmith
     metalsmith.use(plugin(options))

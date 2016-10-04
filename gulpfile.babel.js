@@ -1,7 +1,6 @@
 'use strict'
 
-// Load global config and gulp
-import config from './garrus.json'
+// Load gulp
 import gulp from 'gulp'
 
 // Load modules to run tasks from files

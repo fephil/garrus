@@ -1,5 +1,5 @@
-// Load global config and gulp
-import config from '../garrus.json'
+// Load paths and gulp
+import paths from '../config/paths.json'
 import gulp from 'gulp'
 
 // Specific task modules
@@ -7,7 +7,7 @@ import standard from 'gulp-standard'
 
 // Linting task
 gulp.task('standardlint', () => {
-  return gulp.src(config.paths.js + '**/*.js')
+  return gulp.src(paths.js + '**/*.js')
   .pipe(standard())
   .pipe(standard.reporter('default', {
     breakOnError: false
