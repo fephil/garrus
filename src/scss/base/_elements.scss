@@ -1,0 +1,36 @@
+html {
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-size: $base-font-size;
+  font-family: $font-primary;
+  font-weight: $font-primary-weight;
+}
+
+::selection {
+  background: #a8d1ff;
+  text-shadow: none;
+}
+
+// Make sure embeds and iframes fit their responsive containers
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+// Responsive images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+button {
+  touch-action: manipulation;
+}

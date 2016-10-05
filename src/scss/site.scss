@@ -1,19 +1,42 @@
-// Non outputted Sass
-@import 'modules/functions';
-@import 'modules/variables';
-@import 'modules/mixins';
+/*
+* ITCSS information
+*
+* 1. Settings - Global variables for SASS.
+* 2. Tools - Mixins and functions for SASS.
+* 3. Generic - Vendor styles.
+* 4. Base - Elements with no classes and IDs, eg typography.
+* 5. Objects - Code for things like layout and structure.
+* 6. Components - Styling for modules of code such as an accordion.
+* 7. Trumps - Style overrides.
+*
+*/
 
-// Vendor files
+// Settings
+@import 'settings/variables';
+
+// Tools
+@import 'tools/functions';
+@import 'tools/mixins';
+
+// Generic
 @import "../../node_modules/normalize.css/normalize";
 @import '../../node_modules/sass-mq/mq.scss';
 @import '../../node_modules/susy/sass/susy.scss';
 
-// Partials
-@import 'partials/base';
-@import 'partials/svgsprite';
-@import 'partials/icon';
-@import 'partials/container';
-@import 'partials/typography';
-@import 'partials/header';
-@import 'partials/footer';
-@import 'partials/grid-test';
+// Base
+@import 'base/boxsizing';
+@import 'base/elements';
+@import 'base/typography';
+
+// Objects
+@import 'objects/container';
+
+// Components
+@import 'components/svgsprite';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/grid-test';
+
+// Trumps
+@import 'trumps/visibility';
+@import 'trumps/print';
