@@ -33,6 +33,7 @@ This workflow contains:
 * HTML minification,
 * StandardJS linting,
 * CSS Stylelinting,
+* Tota11y accessibility checking integration,
 * Easy to use with simple Gulp tasks & configuration,
 
 Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/fephil/garrus/issues) for more information about future enhancements and changes.
@@ -68,9 +69,12 @@ Run these tasks in your command line Terminal:
 
 `gulp auditcode`
 
+`gulp audita11y`
+
 * The `gulp` task builds the website, watches for changes and starts up a sever,
 * The `gulp deploy` task builds the website without watching for changes or running the server,
-* The `gulp auditcode` task runs various linting on the project source files.
+* The `gulp auditcode` task runs various linting checks on the project source files,
+* The `gulp audita11y` task builds the website and adds tota11y for accessibility checking,
 * The `--production` flag builds minified assets with no sourcemaps,
 * The `--debug` flag shows the files being created in each task (if the task has a pipe).
 

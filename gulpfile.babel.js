@@ -30,12 +30,22 @@ gulp.task('deploy', (callback) => {
   )
 })
 
-// Run the audit task to check the code
+// Run a task to check the code
 gulp.task('auditcode', (callback) => {
   runSequence(
     'scssfmt',
     'scsslint',
     'standardlint',
+    callback
+  )
+})
+
+// Run a task to build website and add tota11y
+gulp.task('audita11y', (callback) => {
+  runSequence(
+    'deploy',
+    'tota11y',
+    'browsersync',
     callback
   )
 })
