@@ -26,7 +26,7 @@ var svgConfig = {
       sprite: 'assets/svgsprite.svg',
       render: {
         scss: {
-          dest: '../' + paths.scss + 'partials/_svgsprite.scss'
+          dest: '../' + paths.scss + 'components/_svgsprite.scss'
         }
       },
       example: examplePage

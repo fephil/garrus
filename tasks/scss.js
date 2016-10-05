@@ -58,13 +58,13 @@ gulp.task('scss', () => {
 
 // stylefmt task
 gulp.task('scssfmt', () => {
-  return gulp.src([paths.scss + '**/*.scss', '!' + paths.scss + 'vendor{,/**}'])
+  return gulp.src([paths.scss + '**/*.scss', '!' + paths.scss + 'generic{,/**}'])
   .pipe(postcss([stylefmt], {syntax: syntax}))
   .pipe(gulp.dest(paths.scss))
 })
 
 // Stylelint task
 gulp.task('scsslint', () => {
-  return gulp.src([paths.scss + '**/*.scss', '!' + paths.scss + 'vendor{,/**}'])
+  return gulp.src([paths.scss + '**/*.scss', '!' + paths.scss + 'generic{,/**}'])
   .pipe(postcss(workflow, {syntax: syntax}))
 })
