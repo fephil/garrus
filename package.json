@@ -56,7 +56,7 @@
     "postcss-pxtorem": "3.3.1",
     "postcss-reporter": "1.4.1",
     "postcss-scss": "0.3.1",
-    "require-dir": "0.3.0",
+    "require-dir": "0.3.1",
     "run-sequence": "1.2.2",
     "sass-mq": "3.2.9",
     "stylefmt": "4.3.1",
