@@ -48,7 +48,7 @@ Download the latest stable release from [GitHub](https://github.com/fephil/garru
 * Install Node V4 LTS or Node V6,
 * Run in Terminal: `npm i gulp-cli -g` (Gulp does not need to be installed globally),
 * Navigate to the workflow folder in command line Terminal,
-* Run: `npm i`.
+* Run: `npm i` or `yarn` (if Yarn is installed).
 
 Please note that there are a large amount of development dependencies to install, due to the 'all in one' nature of the workflow. It could possibly take a long time to install all the required modules.
 
