@@ -1,11 +1,10 @@
 # garrus v0.6.0-alpha1
 
+[![GitHub release](https://img.shields.io/github/release/fephil/garrus.svg?maxAge=2592000)](https://github.com/fephil/garrus/releases)
 [![Build Status](https://travis-ci.org/fephil/garrus.svg?branch=master)](https://travis-ci.org/fephil/garrus)
 [![devDependency Status](https://david-dm.org/fephil/garrus/dev-status.svg)](https://david-dm.org/fephil/garrus#info=devDependencies)
 [![Dependency Status](https://david-dm.org/fephil/garrus.svg)](https://david-dm.org/fephil/garrus)
-[![GitHub release](https://img.shields.io/github/release/fephil/garrus.svg?maxAge=2592000)](https://github.com/fephil/garrus/releases)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 **A modern, opinionated frontend workflow for building a static website and blog.**
 
