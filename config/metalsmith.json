@@ -32,7 +32,10 @@
       "useragent": "*",
       "allow": ["about.html", "contact.html"],
       "disallow": ["test.html"],
-      "sitemap": "/sitemap.xml"
+      "sitemap": "http://www.example.com/sitemap.xml"
+    },
+    "metalsmith-mapsite": {
+      "hostname": "http://www.example.com"
     }
   }
 }
