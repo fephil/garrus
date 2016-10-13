@@ -19,6 +19,12 @@
     "metalsmith-register-helpers": {
       "directory": "./src/helpers"
     },
+    "metalsmith-robots": {
+      "useragent": "*",
+      "allow": ["about.html", "contact.html"],
+      "disallow": ["test.html"],
+      "sitemap": "/sitemap.xml"
+    },
     "metalsmith-layouts": {
       "engine": "handlebars",
       "directory": "./src/layouts",

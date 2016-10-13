@@ -54,6 +54,7 @@
     "metalsmith-metadata-directory": "1.0.0",
     "metalsmith-permalinks": "0.5.0",
     "metalsmith-register-helpers": "0.2.0",
+    "metalsmith-robots": "1.0.1",
     "postcss-pxtorem": "3.3.1",
     "postcss-reporter": "1.4.1",
     "postcss-scss": "0.3.1",
