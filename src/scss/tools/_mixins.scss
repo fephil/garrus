@@ -10,3 +10,15 @@
     clear: both;
   }
 }
+
+// Text Truncate
+@mixin text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Letter Spacing
+@mixin letter-spacing($letterspacing) {
+  letter-spacing: $letterspacing/1000 + rem;
+}

@@ -1,0 +1,35 @@
+$loop: 5;
+
+@for $i from 0 through $loop {
+  .m-t-#{$i} {
+    margin-top: ($spacer * $i) !important;
+
+    @include mq($from: m) {
+      margin-top: ($spacer * ($i * 2)) !important;
+    }
+  }
+
+  .m-b-#{$i} {
+    margin-bottom: ($spacer * $i) !important;
+
+    @include mq($from: m) {
+      margin-bottom: ($spacer * ($i * 2)) !important;
+    }
+  }
+
+  .p-t-#{$i} {
+    padding-top: ($spacer * $i) !important;
+
+    @include mq($from: m) {
+      padding-top: ($spacer * ($i * 2)) !important;
+    }
+  }
+
+  .p-b-#{$i} {
+    padding-bottom: ($spacer * $i) !important;
+
+    @include mq($from: m) {
+      padding-bottom: ($spacer * ($i * 2)) !important;
+    }
+  }
+}

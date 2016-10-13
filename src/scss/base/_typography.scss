@@ -1,33 +1,70 @@
-.h1,
-.h2,
-.h3 {
+// Typography styles
+$Typography: (
+  h1: (
+    font-size: 32px,
+    font-size--medium: 45px,
+    font-size--large: 45px,
+    font-family: $font-headline,
+    font-weight: $font-headline-weight,
+    line-height: 0.9,
+    margin-bottom: ($spacer * 2),
+    letter-spacing: 20
+  ),
+  h2: (
+    font-size: 24px,
+    font-size--medium: 31px,
+    font-size--large: 31px,
+    font-family: $font-headline,
+    font-weight: $font-headline-weight,
+    line-height: 0.9,
+    margin-bottom: ($spacer * 2),
+    letter-spacing: 20
+  ),
+  h3: (
+    font-size: 16px,
+    font-size--medium: 22px,
+    font-size--large: 22px,
+    font-family: $font-headline,
+    font-weight: $font-headline-weight,
+    line-height: 0.9,
+    margin-bottom: ($spacer * 2),
+    letter-spacing: 20
+  )
+);
+
+// Produces .h1, h1, .h2, h2, etc...
+@for $i from 1 to 4 {
+  h#{$i},
+  .h#{$i} {
+    font-size: map-deep-get($Typography, h#{$i}, font-size);
+    line-height: map-deep-get($Typography, h#{$i}, line-height);
+    margin-bottom: map-deep-get($Typography, h#{$i}, margin-bottom);
+    font-family: map-deep-get($Typography, h#{$i}, font-family);
+    font-weight: map-deep-get($Typography, h#{$i}, font-weight);
+    margin-top: 0;
+    @include letter-spacing(map-deep-get($Typography, h#{$i}, letter-spacing));
+
+    @include mq($from: m) {
+      font-size: map-deep-get($Typography, h#{$i}, font-size--medium);
+    }
+
+    @include mq($from: l) {
+      font-size: map-deep-get($Typography, h#{$i}, font-size--large);
+    }
+  }
+}
+
+b,
+strong {
   font-family: $font-headline;
   font-weight: $font-headline-weight;
 }
 
-.h1 {
-  font-size: 32px;
-  line-height: 1.1;
-  background-color: $brand-b;
+a {
+  color: inherit;
+  text-decoration: underline;
 
-  @include mq($from: m) {
-    font-size: 45px;
-  }
-}
-
-.h2 {
-  font-size: 24px;
-  line-height: 1.2;
-
-  @include mq($from: m) {
-    font-size: 31px;
-  }
-}
-
-.h3 {
-  font-size: 16px;
-
-  @include mq($from: m) {
-    font-size: 22px;
+  &:hover {
+    text-decoration: none;
   }
 }
