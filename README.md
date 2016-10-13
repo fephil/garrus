@@ -27,6 +27,7 @@ This workflow contains:
 * Metalsmith (with Handlebars templates, JSON metadata, Blog and Markdown support)
 * Webpack with jQuery integration,
 * Babel with ES2015 support,
+* Javascript Unit Testing with Mocha & Chai,
 * SASS & PostCSS,
 * Critical inlined CSS,
 * Sass-mq & Susy grid system,

@@ -10,4 +10,5 @@ gulp.task('watch', () => {
   gulp.watch(paths.icons + '**/*.svg', ['svgsprite'])
   gulp.watch([paths.fonts + '**/*', paths.files + '**/*'], ['copy'])
   gulp.watch([paths.data + '**/*.json', paths.layouts + '**/*.hbs', paths.pages + '**/*.hbs', paths.partials + '**/*.hbs'], ['metalsmith'])
+  gulp.watch(paths.test + '**/*.js', ['mocha'])
 })

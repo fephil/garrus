@@ -13,6 +13,7 @@ gulp.task('default', (callback) => {
   runSequence(
     'clean',
     'metalsmith',
+    'mocha',
     ['htmlmin', 'svgsprite', 'scss', 'webpack', 'img', 'copy'],
     ['browsersync', 'watch'],
     callback
@@ -24,6 +25,7 @@ gulp.task('deploy', (callback) => {
   runSequence(
     'clean',
     'metalsmith',
+    'mocha',
     ['htmlmin', 'svgsprite', 'scss', 'webpack', 'img', 'copy'],
     'crticalcss',
     callback
@@ -36,6 +38,7 @@ gulp.task('auditcode', (callback) => {
     'scssfmt',
     'scsslint',
     'standardlint',
+    'mocha',
     callback
   )
 })

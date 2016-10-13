@@ -10,5 +10,6 @@
   "layouts": "src/layouts/",
   "pages": "src/pages/",
   "partials": "src/partials/",
-  "data": "src/data/"
+  "data": "src/data/",
+  "test": "test/"
 }
