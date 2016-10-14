@@ -1,4 +1,4 @@
-# garrus v0.6.0
+# garrus v0.6.1
 
 [![GitHub release](https://img.shields.io/github/release/fephil/garrus.svg?maxAge=2592000)](https://github.com/fephil/garrus/releases)
 [![Build Status](https://travis-ci.org/fephil/garrus.svg?branch=master)](https://travis-ci.org/fephil/garrus)
