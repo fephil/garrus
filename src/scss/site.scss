@@ -1,8 +1,8 @@
 /*
 * ITCSS information
 *
-* 1. Settings - Global variables for SASS.
-* 2. Tools - Mixins and functions for SASS.
+* 1. Tools - Mixins and functions for SASS.
+* 2. Settings - Global variables for SASS.
 * 3. Generic - Vendor styles.
 * 4. Base - Elements with no classes and IDs, eg typography.
 * 5. Objects - Code for things like layout and structure.
@@ -11,12 +11,12 @@
 *
 */
 
-// Settings
-@import 'settings/variables';
-
 // Tools
 @import 'tools/functions';
 @import 'tools/mixins';
+
+// Settings
+@import 'settings/variables';
 
 // Generic
 @import "../../node_modules/normalize.css/normalize";
