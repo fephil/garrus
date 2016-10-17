@@ -68,7 +68,7 @@
     "stylelint": "7.4.2",
     "stylelint-config-standard": "13.0.2",
     "susy": "2.2.12",
-    "tota11y": "0.1.4",
+    "tota11y": "0.1.6",
     "webpack": "1.13.2",
     "yargs": "6.0.0"
   },
