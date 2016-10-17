@@ -70,7 +70,7 @@
     "susy": "2.2.12",
     "tota11y": "0.1.4",
     "webpack": "1.13.2",
-    "yargs": "6.0.0"
+    "yargs": "6.2.0"
   },
   "dependencies": {
     "fastclick": "1.0.6",
