@@ -17,5 +17,5 @@ node_js:
   - '4'
   - '6'
 install:
-  - yarn install gulp-cli -g
+  - yarn global add gulp-cli
   - yarn install
