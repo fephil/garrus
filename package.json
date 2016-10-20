@@ -1,7 +1,7 @@
 {
   "name": "garrus",
   "description": "A modern, opinionated frontend workflow for building a static website and blog",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "author": "Phil Lennon <enquiry@frontendphil.com>",
   "private": true,
   "license": "MIT",
