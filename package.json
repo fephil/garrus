@@ -66,7 +66,7 @@
     "sass-mq": "3.2.9",
     "stylefmt": "4.3.1",
     "stylelint": "7.5.0",
-    "stylelint-config-standard": "13.0.2",
+    "stylelint-config-standard": "14.0.0",
     "susy": "2.2.12",
     "tota11y": "0.1.6",
     "webpack": "1.13.2",
