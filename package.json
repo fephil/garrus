@@ -69,7 +69,7 @@
     "stylelint-config-standard": "13.0.2",
     "susy": "2.2.12",
     "tota11y": "0.1.6",
-    "webpack": "1.13.2",
+    "webpack": "1.13.3",
     "yargs": "6.2.0"
   },
   "dependencies": {
