@@ -47,7 +47,7 @@
     "gulp-util": "3.0.7",
     "handlebars": "4.0.5",
     "imagemin-pngquant": "5.0.0",
-    "metalsmith": "2.2.0",
+    "metalsmith": "2.3.0",
     "metalsmith-collections": "0.7.0",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-in-place": "1.4.4",
