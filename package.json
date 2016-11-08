@@ -59,7 +59,7 @@
     "metalsmith-register-helpers": "0.2.0",
     "metalsmith-robots": "1.0.1",
     "postcss-pxtorem": "3.3.1",
-    "postcss-reporter": "1.4.1",
+    "postcss-reporter": "2.0.0",
     "postcss-scss": "0.3.1",
     "require-dir": "0.3.1",
     "run-sequence": "1.2.2",
