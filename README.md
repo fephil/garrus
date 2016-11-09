@@ -85,7 +85,7 @@ More documentation is in progress.
 
 ## Credit
 
-* Print styles from the [HTML5BP](https://github.com/h5bp/html5-boilerplate),
+* Print styles from the [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate),
 * Sample images come from [Unsplash](https://unsplash.com),
 * Sample icons come from the [Street Support project](https://github.com/StreetSupport/streetsupport-web).
 
