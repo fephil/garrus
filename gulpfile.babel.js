@@ -14,6 +14,8 @@ gulp.task('default', (callback) => {
     'clean',
     'cachebusting',
     'metalsmith',
+    'standardlint',
+    'standardlinttests',
     'mocha',
     ['htmlmin', 'svgsprite', 'scss', 'webpack', 'img', 'copy'],
     ['browsersync', 'watch'],
@@ -27,6 +29,8 @@ gulp.task('deploy', (callback) => {
     'clean',
     'cachebusting',
     'metalsmith',
+    'standardlint',
+    'standardlinttests',
     'mocha',
     ['htmlmin', 'svgsprite', 'scss', 'webpack', 'img', 'copy'],
     'crticalcss',
@@ -40,6 +44,7 @@ gulp.task('auditcode', (callback) => {
     'scssfmt',
     'scsslint',
     'standardlint',
+    'standardlinttests',
     'mocha',
     callback
   )
