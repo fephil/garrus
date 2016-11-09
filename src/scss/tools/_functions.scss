@@ -29,3 +29,29 @@
   @return $map;
 }
 
+// Asset URL builder
+// @access private
+// @param {String} $type - Asset type, matching folder name
+// @param {String} $file - Asset file name, including extension
+// @return {URL} - A `url()` function leading to the asset
+@function asset($path-asset, $file) {
+  @return url($path-base + '/' + $path-asset + '/' + $file);
+}
+
+// Image asset helper
+// @access public
+// @param {String} $file - Asset file name, including extension
+// @return {URL} - A `url()` function leading to the image
+// @require {function} asset
+@function image($file) {
+  @return asset($path-images, $file);
+}
+
+// Font asset helper
+// @access public
+// @param {String} $file - Asset file name, including extension
+// @return {URL} - A `url()` function leading to the font
+// @require {function} asset
+@function font($file) {
+  @return asset($path-fonts, $file);
+}

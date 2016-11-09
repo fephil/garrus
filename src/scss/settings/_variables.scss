@@ -9,7 +9,12 @@ $mq-responsive: true;
 // across team members. It will improve communication between
 // stakeholders, designers, developers, and testers.
 $mq-breakpoints: (
-  xs:  360px, s:   480px, m:   700px, l:   900px, xl:  1300px, );
+  xs:  360px,
+  s:   480px,
+  m:   700px,
+  l:   900px,
+  xl:  1300px,
+);
 
 // Define the breakpoint from the $mq-breakpoints list that should
 // be used as the target width when outputting a static stylesheet
@@ -52,6 +57,11 @@ $colors: (
   -c: $brand-c
 );
 
+// Paths - Do not include trailing slash
+// eg: background-image: image('basket/background.jpg');
+$path-base: '..';
+$path-fonts: 'fonts';
+$path-images: 'img';
 
 // Fonts
 $font-primary: 'georgia', serif;
@@ -60,9 +70,13 @@ $font-headline: 'verdana', sans-serif;
 $font-headline-weight: 700;
 
 // Default Grid Options
-// -----------------------------
 $susy: (
-  columns: $column-small, container: $site-container, gutters: $grid-gutter, global-box-sizing: border-box, gutter-position: after, debug: (
+  columns: $column-small,
+  container: $site-container,
+  gutters: $grid-gutter,
+  global-box-sizing: border-box,
+  gutter-position: after,
+  debug: (
     image: $grid-debug
   )
 );
