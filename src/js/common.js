@@ -1,4 +1,4 @@
-require.ensure(['holderjs', 'svg4everybody'], function(require) {
+require.ensure(['holderjs', 'svg4everybody'], function (require) {
   const Holder = require('holderjs')
   const Svg4everybody = require('svg4everybody')
 

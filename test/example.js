@@ -1,4 +1,6 @@
-var should = require('chai').should()
+/* global it */
+
+var should = require('chai').should() // eslint-disable-line
 
 var testString = 'this is a string'
 
