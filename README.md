@@ -37,8 +37,7 @@ This workflow contains:
 * StandardJS linting,
 * CSS Stylelinting,
 * Tota11y accessibility checking integration,
-* Easy to use with simple Gulp tasks & configuration,
-* Supports [Yarn Package Manager](https://yarnpkg.com).
+* Easy to use with simple Gulp tasks & configuration.
 
 Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/fephil/garrus/issues) for more information about future enhancements and changes.
 
