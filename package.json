@@ -64,7 +64,7 @@
     "require-dir": "0.3.1",
     "run-sequence": "1.2.2",
     "sass-mq": "3.3.1",
-    "stylefmt": "4.3.1",
+    "stylefmt": "4.4.0",
     "stylelint": "7.5.0",
     "stylelint-config-standard": "14.0.0",
     "susy": "2.2.12",
