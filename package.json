@@ -28,7 +28,7 @@
     "chai": "3.5.0",
     "critical": "0.8.0",
     "css-mqpacker": "5.0.1",
-    "cssnano": "3.8.0",
+    "cssnano": "3.9.1",
     "cz-conventional-changelog": "1.2.0",
     "del": "2.2.2",
     "gulp": "3.9.1",
